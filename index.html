@@ -1,0 +1,1213 @@
+<title>Cindy · UIUX Designer Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* ── TOKENS ─────────────────────────────────────────── */
+:root {
+  --ground:  #13121C;
+  --surface: #1D1C28;
+  --surf2:   #252336;
+  --text:    #EDE9E2;
+  --muted:   #857F77;
+  --subtle:  rgba(237,233,226,0.25);
+  --border:  rgba(237,233,226,0.07);
+  --accent:  #D4956A;
+  --green:   #5BAE7A;
+  --lbg:     #F7F5F2;
+  --ltxt:    #18171F;
+  --lmuted:  #6B6660;
+  --lsurf:   #EEECEA;
+  --lborder: rgba(24,23,31,0.09);
+  --navy:    #0D1929;
+  --forest:  #0C1E14;
+
+  --f: "Microsoft JHengHei","微軟正黑體","PingFang TC","蘋方-繁",sans-serif;
+  --m: "Courier New",Courier,monospace;
+}
+
+/* ── RESET ───────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--ground);color:var(--text);font-family:var(--f);font-size:16px;line-height:1.7;overflow-x:hidden;font-style:normal;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:2px;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}}
+
+/* ── NAV ─────────────────────────────────────────────── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 3rem;background:rgba(19,18,28,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-logo{font-weight:700;font-size:1.0625rem;letter-spacing:.02em;}
+.nav-links{display:flex;gap:2rem;align-items:center;}
+.nav-link{font-family:var(--m);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);transition:color .2s;}
+.nav-link:hover{color:var(--text);}
+
+/* ── SECTION EYEBROW ────────────────────────────────── */
+.eyebrow{font-family:var(--m);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;}
+.eyebrow::after{content:'';flex:0 0 32px;height:1px;background:currentColor;opacity:.4;}
+.eyebrow-lt{color:var(--lmuted);}
+
+/* ── HOME HERO ───────────────────────────────────────── */
+.home{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem 5rem;position:relative;overflow:hidden;}
+.home-glow{position:absolute;top:-10%;right:-5%;width:55vw;height:55vw;background:radial-gradient(ellipse,rgba(212,149,106,.1) 0%,transparent 65%);pointer-events:none;}
+.home-glow2{position:absolute;bottom:5%;left:-8%;width:30vw;height:30vw;background:radial-gradient(ellipse,rgba(91,174,122,.07) 0%,transparent 65%);pointer-events:none;}
+.home-label{font-family:var(--m);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;}
+.home-name{font-weight:700;font-size:clamp(4.5rem,11vw,9rem);line-height:.9;letter-spacing:-.02em;margin-bottom:2rem;}
+.home-desc{font-size:1.0625rem;color:var(--muted);max-width:420px;line-height:1.75;margin-bottom:3.5rem;}
+.home-projects{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;max-width:760px;}
+.pcard{border:1px solid var(--border);border-radius:8px;padding:1.75rem;background:var(--surface);transition:border-color .2s,background .2s;display:block;}
+.pcard:hover{border-color:rgba(237,233,226,.18);background:var(--surf2);}
+.pcard-num{font-family:var(--m);font-size:.6rem;letter-spacing:.2em;color:var(--muted);margin-bottom:.875rem;}
+.pcard-title{font-weight:700;font-size:1.25rem;margin-bottom:.4rem;}
+.pcard-sub{font-size:.8125rem;color:var(--muted);margin-bottom:1.25rem;}
+.pcard-arrow{font-family:var(--m);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);}
+.pcard--carbon .pcard-title{color:var(--accent);}
+.pcard--mat .pcard-title{color:var(--green);}
+.pcard-accent-bar{width:3px;height:100%;position:absolute;left:0;top:0;border-radius:8px 0 0 8px;}
+.pcard{position:relative;}
+.pcard--carbon .pcard-accent-bar{background:var(--accent);}
+.pcard--mat .pcard-accent-bar{background:var(--green);}
+
+/* ── PROJECT HERO ────────────────────────────────────── */
+.proj-hero{padding:8rem 3rem 5rem;min-height:65svh;display:flex;flex-direction:column;justify-content:flex-end;}
+.proj-hero--carbon{background:var(--navy);}
+.proj-hero--mat{background:var(--forest);}
+.proj-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem;}
+.proj-tag{font-family:var(--m);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;padding:.3em .8em;border-radius:3px;border:1px solid;}
+.proj-tag--carbon{border-color:rgba(212,149,106,.5);color:var(--accent);}
+.proj-tag--mat{border-color:rgba(91,174,122,.5);color:var(--green);}
+.proj-title{font-weight:700;font-size:clamp(2.75rem,6vw,5rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:.75rem;}
+.proj-subtitle{font-size:1.0625rem;color:var(--muted);margin-bottom:2.5rem;}
+.proj-meta-row{display:flex;flex-wrap:wrap;gap:2.5rem;}
+.proj-meta-item{display:flex;flex-direction:column;gap:.25rem;}
+.meta-k{font-family:var(--m);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(237,233,226,.3);}
+.meta-v{font-size:.875rem;color:var(--muted);}
+
+/* ── CASE STUDY SECTIONS ─────────────────────────────── */
+.cs{padding:5rem 3rem;}
+.cs-lt{background:var(--lbg);color:var(--ltxt);}
+.cs-dk{background:var(--ground);color:var(--text);}
+.cs-navy{background:var(--navy);color:var(--text);}
+.cs-forest{background:var(--forest);color:var(--text);}
+.cs-inner{max-width:1100px;margin:0 auto;}
+.cs-title{font-weight:700;font-size:clamp(1.5rem,3vw,2.25rem);margin-bottom:1.25rem;line-height:1.2;}
+.cs-body{font-size:.9375rem;color:var(--lmuted);line-height:1.8;max-width:680px;}
+.cs-body-dk{font-size:.9375rem;color:var(--muted);line-height:1.8;max-width:680px;}
+
+/* 2-col overview */
+.overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.fact-box{background:var(--lsurf);border-radius:6px;padding:1.25rem;border:1px solid var(--lborder);}
+.fact-box--dk{background:var(--surf2);border-color:var(--border);}
+.fact-num{font-weight:700;font-size:2rem;line-height:1;color:var(--accent);margin-bottom:.3rem;}
+.fact-num--g{color:var(--green);}
+.fact-desc{font-size:.8125rem;color:var(--lmuted);}
+.fact-desc-dk{font-size:.8125rem;color:var(--muted);}
+
+/* pain points */
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem;}
+.pain-card{background:var(--surface);border-radius:8px;padding:1.5rem;border:1px solid var(--border);}
+.pain-head{font-weight:600;font-size:.9375rem;margin-bottom:.625rem;}
+.pain-body{font-size:.8125rem;color:var(--muted);line-height:1.7;}
+.pain-num{font-family:var(--m);font-size:.6rem;letter-spacing:.15em;color:var(--accent);margin-bottom:.625rem;display:block;}
+.pain-num--g{color:var(--green);}
+
+/* user cards */
+.user-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem;}
+.user-card{background:var(--lsurf);border-radius:8px;padding:1.5rem;border:1px solid var(--lborder);}
+.user-role{font-weight:700;font-size:1rem;margin-bottom:.3rem;}
+.user-desc{font-size:.8125rem;color:var(--lmuted);line-height:1.7;margin-bottom:1rem;}
+.user-pain-label{font-family:var(--m);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--lmuted);margin-bottom:.4rem;}
+.user-pain{font-size:.8rem;color:var(--lmuted);line-height:1.6;}
+.user-pain li{list-style:none;padding-left:1em;position:relative;}
+.user-pain li::before{content:'·';position:absolute;left:0;}
+
+/* IA diagram */
+.ia-wrap{margin-top:2rem;}
+.ia-flow{display:flex;flex-direction:column;gap:0;margin-top:1.5rem;}
+.ia-row{display:grid;gap:1rem;margin-bottom:.5rem;}
+.ia-row--2{grid-template-columns:1fr 1fr;}
+.ia-row--4{grid-template-columns:repeat(4,1fr);}
+.ia-node{background:var(--lsurf);border:1px solid var(--lborder);border-radius:6px;padding:1rem 1.25rem;}
+.ia-node-head{font-weight:600;font-size:.875rem;margin-bottom:.375rem;}
+.ia-node-items{font-size:.75rem;color:var(--lmuted);line-height:1.6;}
+.ia-node-items li{list-style:none;padding-left:.875rem;position:relative;}
+.ia-node-items li::before{content:'–';position:absolute;left:0;color:var(--accent);}
+.ia-node-items li.g::before{color:var(--green);}
+.ia-node--accent{border-color:rgba(212,149,106,.4);}
+.ia-node--green{border-color:rgba(91,174,122,.4);}
+.ia-arrow{text-align:center;color:var(--lmuted);font-size:.875rem;padding:.25rem 0;letter-spacing:.05em;}
+.ia-role-badge{display:inline-block;font-family:var(--m);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;padding:.2em .6em;border-radius:2px;margin-top:.5rem;}
+.ia-role-badge--a{background:rgba(212,149,106,.15);color:var(--accent);}
+.ia-role-badge--g{background:rgba(91,174,122,.15);color:var(--green);}
+
+/* user flow */
+.uflow{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
+.uflow-step{background:var(--lsurf);border:1px solid var(--lborder);border-radius:4px;padding:.5rem 1rem;font-size:.8125rem;font-weight:500;}
+.uflow-arr{color:var(--lmuted);font-size:.875rem;}
+
+/* process sub sections */
+.process-sub{margin-bottom:3.5rem;}
+.process-sub:last-child{margin-bottom:0;}
+.process-title{font-weight:700;font-size:1.125rem;margin-bottom:.75rem;}
+.process-body{font-size:.9375rem;color:var(--lmuted);line-height:1.8;max-width:680px;margin-bottom:1.5rem;}
+
+/* status grid */
+.status-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:1rem;}
+.status-box{border-radius:5px;padding:.875rem 1rem;}
+.status-name{font-weight:600;font-size:.8125rem;margin-bottom:.25rem;}
+.status-desc{font-size:.75rem;line-height:1.5;}
+
+/* screens grid */
+.screens-grid{display:grid;grid-template-columns:1fr;gap:3rem;}
+.screen-wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+.screen-wrap--full{grid-template-columns:1fr;}
+.screen-info-title{font-weight:600;font-size:1rem;margin-bottom:.5rem;}
+.screen-info-body{font-size:.8125rem;color:var(--muted);line-height:1.75;}
+.screen-label{font-family:var(--m);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem;display:block;}
+.screen-label-g{color:var(--green);}
+
+/* v1v2 comparison */
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1rem;}
+.compare-version{font-family:var(--m);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;text-align:center;margin-bottom:.5rem;}
+.compare-version--old{color:var(--muted);}
+.compare-version--new{color:var(--accent);}
+.compare-version--newg{color:var(--green);}
+
+/* highlights */
+.highlight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem;}
+.hl-card{background:var(--lsurf);border-radius:8px;padding:1.5rem;border:1px solid var(--lborder);}
+.hl-card--dk{background:var(--surf2);border-color:var(--border);}
+.hl-num{font-family:var(--m);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.625rem;display:block;}
+.hl-num-g{color:var(--green);}
+.hl-title{font-weight:700;font-size:.9375rem;margin-bottom:.5rem;}
+.hl-body{font-size:.8125rem;line-height:1.7;}
+.hl-body-lt{color:var(--lmuted);}
+.hl-body-dk{color:var(--muted);}
+
+/* contact */
+.contact{padding:7rem 3rem 5rem;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:end;}
+.contact-title{font-weight:700;font-size:clamp(2rem,4.5vw,3.25rem);line-height:1.15;margin-bottom:1.25rem;}
+.contact-title span{color:var(--accent);}
+.contact-p{font-size:.9375rem;color:var(--muted);line-height:1.8;max-width:400px;margin-bottom:2.5rem;}
+.contact-mail{font-family:var(--m);font-size:.8125rem;letter-spacing:.1em;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:.25em;transition:color .2s,border-color .2s;display:inline-block;}
+.contact-mail:hover{color:var(--accent);border-color:var(--accent);}
+.contact-year{font-weight:700;font-size:clamp(4rem,9vw,7rem);color:rgba(237,233,226,.04);letter-spacing:-.03em;line-height:1;white-space:nowrap;}
+
+footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.ft{font-family:var(--m);font-size:.575rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(237,233,226,.18);}
+
+/* ── BROWSER CHROME ──────────────────────────────────── */
+.browser{border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.06),0 24px 60px rgba(0,0,0,.55);}
+.bbar{display:flex;align-items:center;gap:.5rem;padding:.65rem .875rem;}
+.bbar-dk{background:#1E1D2C;}
+.bbar-lt{background:#E2E2E2;}
+.bdots{display:flex;gap:5px;}
+.bdot{width:10px;height:10px;border-radius:50%;}
+.bdot:nth-child(1){background:#FF5F57;}
+.bdot:nth-child(2){background:#FEBC2E;}
+.bdot:nth-child(3){background:#28C840;}
+.burl{flex:1;height:19px;border-radius:3px;display:flex;align-items:center;padding:0 .625rem;font-family:var(--m);font-size:.5rem;letter-spacing:.03em;white-space:nowrap;overflow:hidden;}
+.burl-dk{background:rgba(255,255,255,.06);color:rgba(255,255,255,.2);}
+.burl-lt{background:rgba(0,0,0,.08);color:rgba(0,0,0,.3);}
+.bscreen{aspect-ratio:16/10;overflow:hidden;position:relative;}
+
+/* ── MOCK: 產品盤查總覽 ───────────────────────────────── */
+.mc-ov{position:absolute;inset:0;background:#0F1B2D;display:flex;flex-direction:column;font-family:var(--f);}
+.mc-ov-top{height:34px;min-height:34px;background:#132030;display:flex;align-items:center;padding:0 .75rem;gap:.5rem;border-bottom:1px solid rgba(255,255,255,.05);flex-shrink:0;}
+.mc-bc{font-size:.42rem;color:rgba(255,255,255,.4);}
+.mc-bc span{color:rgba(255,255,255,.7);}
+.mc-sp{flex:1;}
+.mc-btn{height:18px;padding:0 .625rem;background:#D4956A;border-radius:3px;font-size:.4rem;color:#fff;display:flex;align-items:center;}
+.mc-ov-body{flex:1;padding:.5rem .625rem;display:flex;flex-direction:column;gap:.375rem;overflow:hidden;}
+.mc-filter-row{display:flex;gap:.375rem;align-items:center;}
+.mc-dd{height:17px;background:#152030;border:1px solid rgba(255,255,255,.08);border-radius:3px;width:60px;font-size:.38rem;color:rgba(255,255,255,.3);display:flex;align-items:center;padding:0 .4rem;}
+.mc-tbl{background:#142030;border-radius:4px;border:1px solid rgba(255,255,255,.05);overflow:hidden;flex:1;}
+.mc-th{display:flex;align-items:center;gap:.35rem;padding:.28rem .45rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.05);}
+.mc-td-row{display:flex;align-items:center;gap:.35rem;padding:.28rem .45rem;border-bottom:1px solid rgba(255,255,255,.03);}
+.mc-td-row:last-child{border-bottom:none;}
+.mc-cell{height:4px;border-radius:2px;background:rgba(255,255,255,.1);flex-shrink:0;}
+.mc-badge{height:12px;border-radius:2px;flex-shrink:0;display:flex;align-items:center;padding:0 .4rem;}
+.mc-badge-c{font-size:.36rem;}
+.mc-badge--blue{background:rgba(25,122,148,.5);}
+.mc-badge--grey{background:rgba(255,255,255,.1);}
+.mc-badge--green{background:rgba(91,174,122,.4);}
+.mc-badge--amber{background:rgba(212,149,106,.4);}
+.mc-link{width:22px;height:12px;background:rgba(212,149,106,.25);border-radius:2px;flex-shrink:0;}
+
+/* ── MOCK: 五階段 Tab ─────────────────────────────────── */
+.mc-tab-ui{position:absolute;inset:0;background:#0F1B2D;display:flex;flex-direction:column;}
+.mc-tabs-bar{display:flex;border-bottom:1px solid rgba(255,255,255,.07);flex-shrink:0;}
+.mc-tab-item{flex:1;height:28px;display:flex;align-items:center;justify-content:center;font-size:.38rem;color:rgba(255,255,255,.35);border-bottom:2px solid transparent;}
+.mc-tab-item.on{color:#D4956A;border-bottom-color:#D4956A;background:rgba(212,149,106,.06);}
+.mc-tab-body{flex:1;padding:.5rem .625rem;display:flex;flex-direction:column;gap:.375rem;overflow:hidden;}
+.mc-form-row{display:flex;align-items:center;gap:.5rem;padding:.25rem 0;border-bottom:1px solid rgba(255,255,255,.04);}
+.mc-form-lbl{width:50px;height:4px;background:rgba(255,255,255,.12);border-radius:2px;flex-shrink:0;}
+.mc-form-inp{flex:1;height:14px;background:#152030;border:1px solid rgba(255,255,255,.1);border-radius:3px;}
+.mc-form-btn-row{display:flex;justify-content:flex-end;gap:.375rem;padding-top:.25rem;}
+.mc-form-btn{height:16px;border-radius:3px;font-size:.38rem;}
+.mc-form-btn--ghost{background:transparent;border:1px solid rgba(255,255,255,.15);width:35px;}
+.mc-form-btn--solid{background:#D4956A;width:40px;}
+
+/* ── MOCK: 數據品質 DQR ───────────────────────────────── */
+.mc-dqr{position:absolute;inset:0;background:#0F1B2D;display:flex;flex-direction:column;}
+.mc-dqr-hd{height:28px;min-height:28px;background:#132030;display:flex;align-items:center;padding:0 .625rem;gap:.5rem;border-bottom:1px solid rgba(255,255,255,.05);flex-shrink:0;}
+.mc-dqr-bc{font-size:.4rem;color:rgba(255,255,255,.4);}
+.mc-dqr-body{flex:1;padding:.5rem;display:flex;flex-direction:column;gap:.375rem;overflow:hidden;}
+.mc-dqr-stages{display:grid;grid-template-columns:120px repeat(5,1fr);gap:.3rem;background:rgba(255,255,255,.02);border-radius:4px;border:1px solid rgba(255,255,255,.05);overflow:hidden;}
+.mc-dqr-col-hd{height:18px;display:flex;align-items:center;justify-content:center;font-size:.36rem;color:rgba(255,255,255,.4);border-bottom:1px solid rgba(255,255,255,.05);}
+.mc-dqr-col-hd.on{color:#D4956A;}
+.mc-dqr-row-lbl{height:18px;display:flex;align-items:center;padding:0 .45rem;font-size:.36rem;color:rgba(255,255,255,.35);border-bottom:1px solid rgba(255,255,255,.04);}
+.mc-dqr-cell{height:18px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(255,255,255,.04);}
+.mc-dqr-score{width:14px;height:10px;border-radius:2px;}
+.mc-dqr-score--hi{background:rgba(91,174,122,.65);}
+.mc-dqr-score--md{background:rgba(212,149,106,.55);}
+.mc-dqr-score--lo{background:rgba(255,255,255,.12);}
+
+/* ── MOCK: 顧問首頁 ──────────────────────────────────── */
+.mm-con{position:absolute;inset:0;background:#fff;display:flex;flex-direction:column;}
+.mm-hd{height:34px;min-height:34px;background:#fff;border-bottom:2px solid #5BAE7A;display:flex;align-items:center;padding:0 .75rem;gap:.5rem;flex-shrink:0;}
+.mm-icon{width:16px;height:16px;background:#5BAE7A;border-radius:3px;flex-shrink:0;}
+.mm-hd-txt{width:55px;height:6px;background:#333;border-radius:2px;opacity:.35;}
+.mm-hd-sp{flex:1;}
+.mm-hd-user{width:60px;height:10px;background:#ccc;border-radius:2px;}
+.mm-body{flex:1;padding:.5rem .625rem;display:flex;flex-direction:column;gap:.35rem;overflow:hidden;background:#F3F7F3;}
+.mm-section-title{font-size:.42rem;font-weight:600;color:#2D5A3D;padding:.2rem 0;}
+.mm-tbl{background:#fff;border-radius:4px;border:1px solid #D8E8D8;overflow:hidden;}
+.mm-tr{display:flex;align-items:center;gap:.35rem;padding:.25rem .45rem;border-bottom:1px solid #EEEEEE;}
+.mm-tr:last-child{border-bottom:none;}
+.mm-tr.hd{background:#F5FAF5;border-bottom:1px solid #D8E8D8;}
+.mm-td{height:4px;border-radius:2px;background:#D4D4D4;flex-shrink:0;}
+.mm-pill{height:11px;border-radius:8px;flex-shrink:0;}
+.mm-pill--ok{width:34px;background:#E6F5EC;border:1px solid #BDDCBD;}
+.mm-pill--exp{width:34px;background:#FFF0EC;border:1px solid #F7C0B0;}
+
+/* ── MOCK: 年度問卷總覽 ──────────────────────────────── */
+.mm-qov{position:absolute;inset:0;background:#F3F7F3;display:flex;flex-direction:column;}
+.mm-qov-hd{height:32px;min-height:32px;background:#fff;border-bottom:2px solid #5BAE7A;display:flex;align-items:center;padding:0 .75rem;gap:.5rem;flex-shrink:0;}
+.mm-qov-body{flex:1;padding:.5rem .625rem;display:flex;flex-direction:column;gap:.375rem;overflow:hidden;}
+.mm-qcard{background:#fff;border-radius:4px;border:1px solid #D8E8D8;padding:.4rem .5rem;}
+.mm-qcard-head{display:flex;align-items:center;gap:.35rem;margin-bottom:.3rem;}
+.mm-qcard-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.mm-qcard-dot--a{background:#D4956A;}
+.mm-qcard-dot--b{background:#5BAE7A;}
+.mm-qcard-dot--c{background:#7A8FD4;}
+.mm-qcard-title{width:70px;height:5px;background:#333;border-radius:2px;opacity:.5;}
+.mm-qcard-sp{flex:1;}
+.mm-qcard-badge{height:11px;width:30px;border-radius:2px;background:#E6F5EC;}
+.mm-prog-row{display:flex;align-items:center;gap:.4rem;}
+.mm-prog-lbl{width:35px;height:4px;background:#ccc;border-radius:2px;flex-shrink:0;}
+.mm-prog-track{flex:1;height:4px;background:#D8E8D8;border-radius:3px;overflow:hidden;}
+.mm-prog-fill{height:100%;background:#5BAE7A;border-radius:3px;}
+.mm-prog-num{font-size:.36rem;color:#6B6660;white-space:nowrap;flex-shrink:0;width:28px;}
+
+/* ── MOCK: 重大性矩陣 ────────────────────────────────── */
+.mm-mtx{position:absolute;inset:0;background:#fff;display:flex;flex-direction:column;}
+.mm-mtx-hd{height:30px;min-height:30px;background:#fff;border-bottom:1px solid #E0E8E0;display:flex;align-items:center;padding:0 .75rem;gap:.5rem;flex-shrink:0;}
+.mm-mtx-body{flex:1;padding:.5rem;display:flex;gap:.5rem;overflow:hidden;}
+.mm-mtx-plot{flex:1;position:relative;border:1px solid #D8E8D8;border-radius:4px;background:#FAFCFA;}
+.mm-mtx-x-lbl{position:absolute;bottom:.25rem;left:50%;transform:translateX(-50%);font-size:.34rem;color:#6B6660;}
+.mm-mtx-y-lbl{position:absolute;left:.25rem;top:50%;transform:translateY(-50%) rotate(-90deg);font-size:.34rem;color:#6B6660;white-space:nowrap;}
+.mm-mtx-quadrant{position:absolute;top:0;right:0;width:50%;height:50%;background:rgba(91,174,122,.06);border-left:1px dashed rgba(91,174,122,.3);border-bottom:1px dashed rgba(91,174,122,.3);}
+.mm-dot{position:absolute;width:8px;height:8px;border-radius:50%;transform:translate(-50%,50%);}
+.mm-dot--hi{background:#D4956A;width:10px;height:10px;}
+.mm-dot--md{background:#5BAE7A;}
+.mm-dot--lo{background:#7A8FD4;width:6px;height:6px;}
+.mm-mtx-legend{width:80px;display:flex;flex-direction:column;gap:.35rem;justify-content:center;}
+.mm-leg-item{display:flex;align-items:center;gap:.3rem;}
+.mm-leg-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.mm-leg-txt{font-size:.34rem;color:#6B6660;line-height:1.3;}
+
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media(max-width:900px){
+  .nav{padding:1rem 1.5rem;}
+  .nav-links{gap:1.25rem;}
+  .home,.proj-hero,.cs{padding-left:1.5rem;padding-right:1.5rem;}
+  .home-projects,.overview-grid,.pain-grid,.user-grid,.screen-wrap,.compare-grid,.highlight-grid,.ia-row--4{grid-template-columns:1fr;}
+  .ia-row--2{grid-template-columns:1fr;}
+  .status-grid{grid-template-columns:1fr 1fr;}
+  .uflow{flex-direction:column;align-items:flex-start;}
+  .uflow-arr{transform:rotate(90deg);}
+  .contact{grid-template-columns:1fr;padding:4rem 1.5rem;}
+  .contact-year{display:none;}
+  footer{padding:1.25rem 1.5rem;flex-direction:column;gap:.4rem;align-items:flex-start;}
+}
+</style>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#home" class="nav-logo">Cindy</a>
+  <div class="nav-links">
+    <a href="#carbon" class="nav-link">碳足跡方案</a>
+    <a href="#materiality" class="nav-link">重大性平台</a>
+    <a href="#contact" class="nav-link">聯絡</a>
+  </div>
+</nav>
+
+<!-- ══ HOME ══════════════════════════════════════════════════════ -->
+<section id="home" class="home">
+  <div class="home-glow" aria-hidden="true"></div>
+  <div class="home-glow2" aria-hidden="true"></div>
+  <p class="home-label">UIUX Designer · B2B SaaS</p>
+  <h1 class="home-name">Cindy</h1>
+  <p class="home-desc">把複雜的企業系統做得好用。<br>兩年，兩套 ESG 平台，從零開始設計。</p>
+  <div class="home-projects">
+    <a href="#carbon" class="pcard pcard--carbon">
+      <div class="pcard-accent-bar"></div>
+      <p class="pcard-num">01</p>
+      <p class="pcard-title">產品碳足跡方案</p>
+      <p class="pcard-sub">CEO 碳盤查系統 · 核心模組 · 2023–2024</p>
+      <p class="pcard-arrow">查看案例 →</p>
+    </a>
+    <a href="#materiality" class="pcard pcard--mat">
+      <div class="pcard-accent-bar"></div>
+      <p class="pcard-num">02</p>
+      <p class="pcard-title">重大性評估平台</p>
+      <p class="pcard-sub">從 0 到 1 完整平台 · 2024–2025</p>
+      <p class="pcard-arrow">查看案例 →</p>
+    </a>
+  </div>
+</section>
+
+<!-- ══ PROJECT 1: 產品碳足跡方案 ══════════════════════════════════ -->
+<section id="carbon">
+
+  <!-- Hero -->
+  <div class="proj-hero proj-hero--carbon">
+    <div class="proj-tags">
+      <span class="proj-tag proj-tag--carbon">產品碳足跡</span>
+      <span class="proj-tag proj-tag--carbon">B2B SaaS</span>
+      <span class="proj-tag proj-tag--carbon">2023–2024</span>
+    </div>
+    <h2 class="proj-title">產品碳足跡方案</h2>
+    <p class="proj-subtitle">CEO 碳盤查系統 · 核心模組設計</p>
+    <div class="proj-meta-row">
+      <div class="proj-meta-item"><span class="meta-k">角色</span><span class="meta-v">Lead UIUX Designer</span></div>
+      <div class="proj-meta-item"><span class="meta-k">平台</span><span class="meta-v">CEO 碳盤查系統</span></div>
+      <div class="proj-meta-item"><span class="meta-k">時程</span><span class="meta-v">2023–2024</span></div>
+      <div class="proj-meta-item"><span class="meta-k">公司</span><span class="meta-v">快思股份有限公司</span></div>
+    </div>
+  </div>
+
+  <!-- 01 專案概覽 -->
+  <div class="cs cs-lt">
+    <div class="cs-inner">
+      <p class="eyebrow eyebrow-lt">01 / 專案概覽</p>
+      <div class="overview-grid">
+        <div>
+          <h3 class="cs-title">讓製造業能追蹤到每一款產品的碳排放</h3>
+          <p class="cs-body">這個模組是整個 CEO 碳盤查系統中技術難度最高的部分。製造業企業需要依照 ISO 14067 標準，追蹤每款產品從原料取得到廢棄處置的完整碳足跡——我負責從資訊架構規劃、使用者流程設計，到每一個互動細節的完整 UX/UI 設計，並經歷了數據品質評估功能的 v1 到 v2 迭代。</p>
+        </div>
+        <div class="fact-grid">
+          <div class="fact-box"><div class="fact-num">6</div><div class="fact-desc">主要設計畫面</div></div>
+          <div class="fact-box"><div class="fact-num">5</div><div class="fact-desc">生命週期階段</div></div>
+          <div class="fact-box"><div class="fact-num">4</div><div class="fact-desc">產品盤查狀態</div></div>
+          <div class="fact-box"><div class="fact-num">v2</div><div class="fact-desc">數據品質功能迭代</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 問題背景 -->
+  <div class="cs cs-dk">
+    <div class="cs-inner">
+      <p class="eyebrow">02 / 問題背景</p>
+      <h3 class="cs-title">組織層級的碳盤查已不夠用</h3>
+      <p class="cs-body-dk">傳統上，企業只做整體組織的碳盤查。但隨著供應鏈碳揭露要求升級，製造商必須精確計算到每一款產品的碳足跡，分階段追蹤從原料到廢棄的每一個環節。這個需求帶來了三個核心設計挑戰：</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <span class="pain-num">痛點 01</span>
+          <p class="pain-head">資料分散</p>
+          <p class="pain-body">碳排放數據跨越不同部門、不同格式，原料採購、生產工序、運輸數據沒有統一的填報入口，難以整合。</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-num">痛點 02</span>
+          <p class="pain-head">流程複雜</p>
+          <p class="pain-body">ISO 14067 要求追蹤搖籃到墳墓的五個生命週期階段，每個階段的資料欄位和計算邏輯都不同，使用者難以掌握整體流程。</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-num">痛點 03</span>
+          <p class="pain-head">品質不透明</p>
+          <p class="pain-body">使用者填完數據後無法判斷自己的數據品質好不好，對最終計算結果的可信度沒有把握，難以對外揭露。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 使用者分析 -->
+  <div class="cs cs-lt">
+    <div class="cs-inner">
+      <p class="eyebrow eyebrow-lt">03 / 使用者分析</p>
+      <h3 class="cs-title">三種使用者，三種需求</h3>
+      <div class="user-grid">
+        <div class="user-card">
+          <p class="user-role">CSR 專員</p>
+          <p class="user-desc">主要操作者。負責填報碳足跡數據，但通常不具備深厚的碳計算背景，需要系統引導完成整個複雜流程。</p>
+          <p class="user-pain-label">主要痛點</p>
+          <ul class="user-pain">
+            <li>不確定每個階段要填什麼資料</li>
+            <li>不知道哪些數據填錯了或填漏了</li>
+            <li>面對很多技術術語，容易焦慮</li>
+          </ul>
+        </div>
+        <div class="user-card">
+          <p class="user-role">產品工程師</p>
+          <p class="user-desc">提供工序、用料相關數據。對 ESG 系統不熟悉，只需要在特定欄位填入工程數據，不需要了解整個流程。</p>
+          <p class="user-pain-label">主要痛點</p>
+          <ul class="user-pain">
+            <li>工序數據格式與系統不符</li>
+            <li>不清楚為什麼需要這些資訊</li>
+            <li>重複輸入相似產品的數據很耗時</li>
+          </ul>
+        </div>
+        <div class="user-card">
+          <p class="user-role">管理層</p>
+          <p class="user-desc">查看最終報告，做決策。不需要了解計算細節，需要清楚知道哪個產品排放最高、整體達標狀況如何。</p>
+          <p class="user-pain-label">主要痛點</p>
+          <ul class="user-pain">
+            <li>看不懂技術性的數字代表什麼</li>
+            <li>無法快速抓到最需要改善的項目</li>
+            <li>報告格式與對外揭露要求不一致</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 系統架構 -->
+  <div class="cs cs-lt" style="padding-top:0;">
+    <div class="cs-inner">
+      <p class="eyebrow eyebrow-lt">04 / 系統架構</p>
+      <h3 class="cs-title">產品碳足跡模組的資訊架構</h3>
+      <p class="cs-body" style="margin-bottom:0;">這個模組接收生產資訊作為輸入，核心是產品盤查的五階段資料填寫與數據品質評估，最後輸出可供對外揭露的碳足跡報告。</p>
+      <div class="ia-wrap">
+        <div class="ia-flow">
+          <div class="ia-row ia-row--2">
+            <div class="ia-node ia-node--accent">
+              <p class="ia-node-head">生產資訊 — 產品資訊</p>
+              <ul class="ia-node-items">
+                <li>產品型號新增 / 編輯 / 檢視</li>
+                <li>產品工序用料設定</li>
+                <li>用料複製功能</li>
+              </ul>
+            </div>
+            <div class="ia-node ia-node--accent">
+              <p class="ia-node-head">生產資訊 — 工序設置</p>
+              <ul class="ia-node-items">
+                <li>工序項目 CRUD</li>
+                <li>製程地圖上傳</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ia-arrow">↓</div>
+          <div class="ia-row ia-row--2">
+            <div class="ia-node ia-node--accent">
+              <p class="ia-node-head">產品碳足跡 — 資料剖析</p>
+              <ul class="ia-node-items">
+                <li>產品盤查總覽（狀態管理）</li>
+                <li>五階段資料填寫（搖籃到墳墓）</li>
+                <li>三階段資料填寫（搖籃到大門）</li>
+                <li>數據品質設定（DQR 評分）</li>
+              </ul>
+            </div>
+            <div class="ia-node ia-node--accent">
+              <p class="ia-node-head">產品碳足跡 — 結果呈現</p>
+              <ul class="ia-node-items">
+                <li>產品碳足跡清冊</li>
+                <li>產品碳足跡報告書</li>
+                <li>產品碳足跡總覽</li>
+                <li>產品碳足跡分析</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:2rem;">
+          <p style="font-size:.75rem;font-weight:600;color:var(--lmuted);margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.08em;">使用者主要操作流程</p>
+          <div class="uflow">
+            <div class="uflow-step">設定產品資訊</div><div class="uflow-arr">→</div>
+            <div class="uflow-step">建立工序用料</div><div class="uflow-arr">→</div>
+            <div class="uflow-step">新增產品盤查</div><div class="uflow-arr">→</div>
+            <div class="uflow-step">選擇生命週期範疇</div><div class="uflow-arr">→</div>
+            <div class="uflow-step">填寫各階段數據</div><div class="uflow-arr">→</div>
+            <div class="uflow-step">設定數據品質</div><div class="uflow-arr">→</div>
+            <div class="uflow-step">計算 &amp; 凍結結果</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 設計過程 -->
+  <div class="cs cs-lt" style="padding-top:0;">
+    <div class="cs-inner">
+      <p class="eyebrow eyebrow-lt">05 / 設計過程</p>
+
+      <!-- A: 5 tab -->
+      <div class="process-sub">
+        <h3 class="cs-title">A. 如何呈現五個生命週期階段</h3>
+        <p class="process-body">ISO 14067 要求分別追蹤五個階段：原料取得、生產製造、運輸配銷、產品使用、廢棄處置。每個階段的資料欄位不同，如果同時展開顯示，頁面會極度複雜且難以填寫。我選擇 Tab 切換方式，讓使用者一次專注在一個階段，頂部 Tab 狀態同時提示整體完成度。</p>
+        <div class="browser">
+          <div class="bbar bbar-dk">
+            <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
+            <div class="burl burl-dk">carbon.cris.com.tw / 產品碳足跡 / 產品盤查 / 填報</div>
+          </div>
+          <div class="bscreen">
+            <div class="mc-tab-ui">
+              <div class="mc-tabs-bar">
+                <div class="mc-tab-item on">原料取得</div>
+                <div class="mc-tab-item">生產製造</div>
+                <div class="mc-tab-item">運輸配銷</div>
+                <div class="mc-tab-item">產品使用</div>
+                <div class="mc-tab-item">廢棄處置</div>
+              </div>
+              <div class="mc-tab-body">
+                <div class="mc-form-row"><div class="mc-form-lbl"></div><div class="mc-form-inp"></div></div>
+                <div class="mc-form-row"><div class="mc-form-lbl"></div><div class="mc-form-inp"></div></div>
+                <div class="mc-form-row"><div class="mc-form-lbl"></div><div class="mc-form-inp"></div></div>
+                <div class="mc-form-row"><div class="mc-form-lbl"></div><div class="mc-form-inp"></div></div>
+                <div class="mc-form-row"><div class="mc-form-lbl"></div><div class="mc-form-inp"></div></div>
+                <div class="mc-form-btn-row">
+                  <div class="mc-form-btn mc-form-btn--ghost"></div>
+                  <div class="mc-form-btn mc-form-btn--solid"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- B: 狀態設計 -->
+      <div class="process-sub">
+        <h3 class="cs-title">B. 四種產品盤查狀態設計</h3>
+        <p class="process-body">使用者需要在總覽頁快速判斷哪些產品還需要處理。我設計了四種狀態，以顏色區分優先序：灰色代表尚未完成設定，橘色代表上游資料有變動需要更新，藍色代表計算完成，綠色代表已凍結（資料確認不再修改）。</p>
+        <div class="status-grid">
+          <div class="status-box" style="background:rgba(255,255,255,.06);"><p class="status-name" style="color:rgba(237,233,226,.6);">尚未設定完成</p><p class="status-desc" style="color:var(--muted);font-size:.75rem;">生命週期內設定尚未完成，無法計算</p></div>
+          <div class="status-box" style="background:rgba(212,149,106,.12);"><p class="status-name" style="color:#D4956A;">設定需更新</p><p class="status-desc" style="color:var(--muted);font-size:.75rem;">上游資料有變動，需重新匯入更新</p></div>
+          <div class="status-box" style="background:rgba(25,122,148,.15);"><p class="status-name" style="color:#4ABACC;">計算完成</p><p class="status-desc" style="color:var(--muted);font-size:.75rem;">已完成計算，可查看結果或進行凍結</p></div>
+          <div class="status-box" style="background:rgba(91,174,122,.15);"><p class="status-name" style="color:var(--green);">已凍結</p><p class="status-desc" style="color:var(--muted);font-size:.75rem;">資料已確認，數據鎖定不可再修改</p></div>
+        </div>
+      </div>
+
+      <!-- C: DQR v1 v2 -->
+      <div class="process-sub">
+        <h3 class="cs-title">C. 數據品質評估：v1 → v2 迭代</h3>
+        <p class="process-body">數據品質評估（DQR）讓使用者對填寫的數據進行可信度評分。v1 版本是一個獨立的評分頁面，使用者需要另外跳轉過去操作，反映出的問題是：看不到原始填寫的數據，難以判斷如何評分。v2 版本將 DQR 整合進各階段 Tab，讓使用者在填完數據後就能直接在同一頁面評估品質。</p>
+        <div class="compare-grid">
+          <div>
+            <p class="compare-version compare-version--old">v1 — 獨立頁面</p>
+            <div class="browser">
+              <div class="bbar bbar-dk">
+                <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
+                <div class="burl burl-dk">…/ 數據品質設定（舊版）</div>
+              </div>
+              <div class="bscreen">
+                <div class="mc-dqr">
+                  <div class="mc-dqr-hd"><span class="mc-dqr-bc">產品碳足跡 / 數據品質設定</span></div>
+                  <div class="mc-dqr-body">
+                    <div class="mc-dqr-stages">
+                      <div class="mc-dqr-col-hd" style="border-right:1px solid rgba(255,255,255,.05);">評分項目</div>
+                      <div class="mc-dqr-col-hd">原料取得</div>
+                      <div class="mc-dqr-col-hd">生產製造</div>
+                      <div class="mc-dqr-col-hd">運輸配銷</div>
+                      <div class="mc-dqr-col-hd">產品使用</div>
+                      <div class="mc-dqr-col-hd">廢棄處置</div>
+
+                      <div class="mc-dqr-row-lbl" style="border-right:1px solid rgba(255,255,255,.05);">活動數據</div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+
+                      <div class="mc-dqr-row-lbl" style="border-right:1px solid rgba(255,255,255,.05);">完整性</div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+                    </div>
+                    <p style="font-size:.38rem;color:rgba(237,233,226,.25);text-align:center;padding:.5rem 0;">無法對照已填數據，評分困難</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="compare-version compare-version--new">v2 — 整合設計</p>
+            <div class="browser">
+              <div class="bbar bbar-dk">
+                <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
+                <div class="burl burl-dk">…/ 產品盤查 / 數據品質設定</div>
+              </div>
+              <div class="bscreen">
+                <div class="mc-dqr">
+                  <div class="mc-dqr-hd"><span class="mc-dqr-bc">產品碳足跡 / 產品盤查 / <span style="color:rgba(212,149,106,.8)">數據品質設定</span></span></div>
+                  <div class="mc-dqr-body">
+                    <div class="mc-dqr-stages">
+                      <div class="mc-dqr-col-hd" style="border-right:1px solid rgba(255,255,255,.05);">評分項目</div>
+                      <div class="mc-dqr-col-hd on">原料取得</div>
+                      <div class="mc-dqr-col-hd">生產製造</div>
+                      <div class="mc-dqr-col-hd">運輸配銷</div>
+                      <div class="mc-dqr-col-hd">產品使用</div>
+                      <div class="mc-dqr-col-hd">廢棄處置</div>
+
+                      <div class="mc-dqr-row-lbl" style="border-right:1px solid rgba(255,255,255,.05);">活動數據</div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--hi"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--md"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--hi"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--md"></div></div>
+
+                      <div class="mc-dqr-row-lbl" style="border-right:1px solid rgba(255,255,255,.05);">完整性</div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--hi"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--hi"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--md"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+                      <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--hi"></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 主要設計畫面 -->
+  <div class="cs cs-navy">
+    <div class="cs-inner">
+      <p class="eyebrow">06 / 主要設計畫面</p>
+      <div class="screens-grid">
+        <!-- Screen 1 -->
+        <div class="screen-wrap">
+          <div>
+            <span class="screen-label">畫面一</span>
+            <h4 class="screen-info-title">產品盤查總覽</h4>
+            <p class="screen-info-body">使用者進入後第一個看到的畫面。以表格呈現所有產品盤查的狀態，搭配顏色徽章讓使用者快速判斷哪些需要優先處理。篩選列支援依生命週期、狀態、年度篩選。</p>
+          </div>
+          <div class="browser">
+            <div class="bbar bbar-dk">
+              <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
+              <div class="burl burl-dk">carbon.cris.com.tw / 產品碳足跡 / 產品盤查</div>
+            </div>
+            <div class="bscreen">
+              <div class="mc-ov">
+                <div class="mc-ov-top">
+                  <span class="mc-bc">產品碳足跡 / 資料剖析 / <span>產品盤查</span></span>
+                  <div class="mc-sp"></div>
+                  <div class="mc-btn">新增產品盤查</div>
+                </div>
+                <div class="mc-ov-body">
+                  <div class="mc-filter-row">
+                    <div class="mc-dd">功能單位 ▾</div>
+                    <div class="mc-dd">生命週期 ▾</div>
+                    <div class="mc-dd">狀態 ▾</div>
+                    <div class="mc-dd">盤查年度 ▾</div>
+                  </div>
+                  <div class="mc-tbl">
+                    <div class="mc-th">
+                      <div class="mc-cell" style="width:50px;background:rgba(255,255,255,.18);"></div>
+                      <div class="mc-cell" style="width:70px;background:rgba(255,255,255,.18);"></div>
+                      <div class="mc-cell" style="width:35px;background:rgba(255,255,255,.18);"></div>
+                      <div class="mc-cell" style="width:45px;background:rgba(255,255,255,.18);"></div>
+                      <div class="mc-cell" style="width:40px;background:rgba(255,255,255,.18);"></div>
+                    </div>
+                    <div class="mc-td-row">
+                      <div class="mc-cell" style="width:48px;"></div>
+                      <div class="mc-cell" style="width:72px;"></div>
+                      <div class="mc-cell" style="width:28px;"></div>
+                      <div class="mc-badge mc-badge--blue"><span class="mc-badge-c" style="color:rgba(255,255,255,.7);">計算完成</span></div>
+                      <div class="mc-link"></div>
+                    </div>
+                    <div class="mc-td-row">
+                      <div class="mc-cell" style="width:52px;"></div>
+                      <div class="mc-cell" style="width:65px;"></div>
+                      <div class="mc-cell" style="width:30px;"></div>
+                      <div class="mc-badge mc-badge--amber"><span class="mc-badge-c" style="color:rgba(212,149,106,.9);">設定需更新</span></div>
+                      <div class="mc-link"></div>
+                    </div>
+                    <div class="mc-td-row">
+                      <div class="mc-cell" style="width:44px;"></div>
+                      <div class="mc-cell" style="width:78px;"></div>
+                      <div class="mc-cell" style="width:26px;"></div>
+                      <div class="mc-badge mc-badge--green"><span class="mc-badge-c" style="color:rgba(91,174,122,.9);">已凍結</span></div>
+                      <div class="mc-link"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Screen 2 -->
+        <div class="screen-wrap">
+          <div>
+            <span class="screen-label">畫面二</span>
+            <h4 class="screen-info-title">數據品質設定（DQR）</h4>
+            <p class="screen-info-body">v2 版本整合後的數據品質評估介面。使用者在填完各階段排放源數據後，透過此介面對數據的完整性與可靠度進行評分，系統計算出 DQR 分數作為報告可信度的依據。</p>
+          </div>
+          <div class="browser">
+            <div class="bbar bbar-dk">
+              <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
+              <div class="burl burl-dk">carbon.cris.com.tw / 產品碳足跡 / 數據品質設定</div>
+            </div>
+            <div class="bscreen">
+              <div class="mc-dqr">
+                <div class="mc-dqr-hd"><span class="mc-dqr-bc">產品碳足跡 / 產品盤查 / <span style="color:rgba(212,149,106,.8)">數據品質設定</span></span></div>
+                <div class="mc-dqr-body">
+                  <div class="mc-tabs-bar" style="margin:0 0 .375rem;">
+                    <div class="mc-tab-item on" style="font-size:.36rem;">原料取得</div>
+                    <div class="mc-tab-item" style="font-size:.36rem;">生產製造</div>
+                    <div class="mc-tab-item" style="font-size:.36rem;">運輸配銷</div>
+                    <div class="mc-tab-item" style="font-size:.36rem;">產品使用</div>
+                    <div class="mc-tab-item" style="font-size:.36rem;">廢棄處置</div>
+                  </div>
+                  <div class="mc-dqr-stages">
+                    <div class="mc-dqr-col-hd" style="border-right:1px solid rgba(255,255,255,.05);">排放源</div>
+                    <div class="mc-dqr-col-hd on">活動數據</div>
+                    <div class="mc-dqr-col-hd">完整性</div>
+                    <div class="mc-dqr-col-hd">可靠度</div>
+                    <div class="mc-dqr-col-hd">時間性</div>
+                    <div class="mc-dqr-col-hd">地理性</div>
+
+                    <div class="mc-dqr-row-lbl" style="border-right:1px solid rgba(255,255,255,.05);">原料 A</div>
+                    <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--hi"></div></div>
+                    <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--hi"></div></div>
+                    <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--md"></div></div>
+                    <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--hi"></div></div>
+                    <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--lo"></div></div>
+
+                    <div class="mc-dqr-row-lbl" style="border-right:1px solid rgba(255,255,255,.05);">原料 B</div>
+                    <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--md"></div></div>
+                    <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--hi"></div></div>
+                    <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--hi"></div></div>
+                    <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--md"></div></div>
+                    <div class="mc-dqr-cell"><div class="mc-dqr-score mc-dqr-score--hi"></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 設計亮點 -->
+  <div class="cs cs-lt">
+    <div class="cs-inner">
+      <p class="eyebrow eyebrow-lt">07 / 設計亮點</p>
+      <h3 class="cs-title">三個讓複雜系統變好用的關鍵決策</h3>
+      <div class="highlight-grid">
+        <div class="hl-card">
+          <span class="hl-num">亮點 01</span>
+          <p class="hl-title">用料複製，大幅降低重複輸入</p>
+          <p class="hl-body hl-body-lt">製造業的產品型號往往相近，工序用料大同小異。我設計了「用料複製」功能，讓使用者從現有產品直接複製工序用料設定後進行微調，避免每款產品都要從頭填寫，顯著降低了操作時間。</p>
+        </div>
+        <div class="hl-card">
+          <span class="hl-num">亮點 02</span>
+          <p class="hl-title">兩種生命週期範疇彈性選擇</p>
+          <p class="hl-body hl-body-lt">不同企業的報告需求不同，不是所有企業都需要追蹤完整的五個階段。我設計了「搖籃到墳墓（五階段）」與「搖籃到大門（三階段）」兩種選項，讓企業依自身需求選擇，不強迫填寫不需要的數據。</p>
+        </div>
+        <div class="hl-card">
+          <span class="hl-num">亮點 03</span>
+          <p class="hl-title">上游變動自動觸發狀態更新</p>
+          <p class="hl-body hl-body-lt">當上游的產品資訊或工序設置有異動，相關的產品盤查會自動切換為「設定需更新」狀態，確保使用者不會在不知情的情況下使用到過期的計算結果，保障數據的正確性。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section><!-- /carbon -->
+
+<!-- ══ PROJECT 2: 重大性評估平台 ══════════════════════════════════ -->
+<section id="materiality">
+
+  <!-- Hero -->
+  <div class="proj-hero proj-hero--mat">
+    <div class="proj-tags">
+      <span class="proj-tag proj-tag--mat">ESG 重大性評估</span>
+      <span class="proj-tag proj-tag--mat">B2B SaaS</span>
+      <span class="proj-tag proj-tag--mat">2024–2025</span>
+    </div>
+    <h2 class="proj-title">重大性評估平台</h2>
+    <p class="proj-subtitle">從 0 到 1 · 完整平台設計</p>
+    <div class="proj-meta-row">
+      <div class="proj-meta-item"><span class="meta-k">角色</span><span class="meta-v">Lead UIUX Designer</span></div>
+      <div class="proj-meta-item"><span class="meta-k">客戶</span><span class="meta-v">湠精實企管顧問所</span></div>
+      <div class="proj-meta-item"><span class="meta-k">時程</span><span class="meta-v">2024–2025</span></div>
+      <div class="proj-meta-item"><span class="meta-k">公司</span><span class="meta-v">快思股份有限公司</span></div>
+    </div>
+  </div>
+
+  <!-- 01 專案概覽 -->
+  <div class="cs cs-lt">
+    <div class="cs-inner">
+      <p class="eyebrow eyebrow-lt">01 / 專案概覽</p>
+      <div class="overview-grid">
+        <div>
+          <h3 class="cs-title">把重大性評估的全流程數位化</h3>
+          <p class="cs-body">受顧問公司委託，從零開始設計一個完整的 ESG 重大性評估平台。這個平台讓顧問公司能夠為多家企業客戶管理重大性議題評估的全流程——從問卷底層資料建置、年度問卷設定與發放，到利害關係人回收追蹤，最後自動生成重大性矩陣與揭露報表。</p>
+        </div>
+        <div class="fact-grid">
+          <div class="fact-box"><div class="fact-num fact-num--g">4</div><div class="fact-desc">系統模組</div></div>
+          <div class="fact-box"><div class="fact-num fact-num--g">3</div><div class="fact-desc">使用者角色</div></div>
+          <div class="fact-box"><div class="fact-num fact-num--g">3</div><div class="fact-desc">問卷類型</div></div>
+          <div class="fact-box"><div class="fact-num fact-num--g">1</div><div class="fact-desc">重大性矩陣自動生成</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 問題背景 -->
+  <div class="cs cs-dk">
+    <div class="cs-inner">
+      <p class="eyebrow">02 / 問題背景</p>
+      <h3 class="cs-title">傳統 Excel 流程的三個斷點</h3>
+      <p class="cs-body-dk">ESG 重大性評估是企業每年必須完成的法遵任務，需要收集來自管理層、員工和外部利害關係人的評分意見。傳統上靠 Excel 或紙本問卷作業，在三個環節上造成大量人工成本：</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <span class="pain-num pain-num--g">痛點 01</span>
+          <p class="pain-head">無法即時追蹤</p>
+          <p class="pain-body">問卷發出去後，顧問不知道哪些人填了、哪些還沒填，需要手動逐一確認，追蹤費時且容易遺漏。</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-num pain-num--g">痛點 02</span>
+          <p class="pain-head">數據手工整理</p>
+          <p class="pain-body">所有填寫數據收集後，顧問需要在 Excel 中大量整理、計算，才能產出重大性矩陣圖，耗費大量時間。</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-num pain-num--g">痛點 03</span>
+          <p class="pain-head">議題調整困難</p>
+          <p class="pain-body">不同產業、不同公司的 ESG 議題不完全相同，傳統方式每次都要重新製作問卷，無法有效複用既有資料。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 使用者角色分析 -->
+  <div class="cs cs-lt">
+    <div class="cs-inner">
+      <p class="eyebrow eyebrow-lt">03 / 使用者角色分析</p>
+      <h3 class="cs-title">三種角色，三個完全不同的操作世界</h3>
+      <p class="cs-body">設計挑戰是讓技術背景、目標、操作頻率都截然不同的三種使用者，在同一個平台上各自找到自己的工作流程，且不互相干擾。</p>
+      <div class="user-grid">
+        <div class="user-card">
+          <p class="user-role">顧問</p>
+          <p class="user-desc">管理多家企業客戶。負責建置 ESG 議題底層資料、設置問卷範本，並監控各客戶的評估進度。是平台的核心管理者，操作最頻繁、權限最高。</p>
+          <p class="user-pain-label">核心需求</p>
+          <ul class="user-pain">
+            <li>快速切換管理不同客戶公司</li>
+            <li>統一管理 ESG 議題清單與評分標準</li>
+            <li>一眼掌握所有客戶的評估進度</li>
+          </ul>
+        </div>
+        <div class="user-card">
+          <p class="user-role">公司窗口</p>
+          <p class="user-desc">企業內部的 ESG 負責人。每年執行本公司的重大性評估，需要設置年度問卷、邀請利害關係人填寫、追蹤填寫進度，並查看最終結果。</p>
+          <p class="user-pain-label">核心需求</p>
+          <ul class="user-pain">
+            <li>操作直覺，不需了解後台設定細節</li>
+            <li>清楚掌握問卷回收進度</li>
+            <li>能直接下載矩陣圖與報告</li>
+          </ul>
+        </div>
+        <div class="user-card">
+          <p class="user-role">問卷填寫者</p>
+          <p class="user-desc">收到邀請的一般員工或外部利害關係人。透過電子郵件連結進入，填寫對 ESG 議題重要性的評分。使用頻率極低，通常一年只填一次。</p>
+          <p class="user-pain-label">核心需求</p>
+          <ul class="user-pain">
+            <li>無帳號，透過連結直接進入</li>
+            <li>手機也能順暢填寫</li>
+            <li>流程短且清楚，不需學習成本</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 系統架構 -->
+  <div class="cs cs-lt" style="padding-top:0;">
+    <div class="cs-inner">
+      <p class="eyebrow eyebrow-lt">04 / 系統架構</p>
+      <h3 class="cs-title">四大模組組成完整平台</h3>
+      <div class="ia-flow" style="margin-top:1.5rem;">
+        <div class="ia-row ia-row--4">
+          <div class="ia-node ia-node--green">
+            <p class="ia-node-head">系統管理</p>
+            <ul class="ia-node-items">
+              <li class="g">登入 / 首頁</li>
+              <li class="g">公司授權管理</li>
+              <li class="g">顧問帳號管理</li>
+              <li class="g">公司資訊設置</li>
+              <li class="g">企業客戶帳號</li>
+            </ul>
+            <span class="ia-role-badge ia-role-badge--g">顧問 + 公司窗口</span>
+          </div>
+          <div class="ia-node ia-node--green">
+            <p class="ia-node-head">後台問卷管理</p>
+            <ul class="ia-node-items">
+              <li class="g">產業別清單</li>
+              <li class="g">利害關係人清單</li>
+              <li class="g">ESG 議題清單</li>
+              <li class="g">評分項目管理</li>
+              <li class="g">問卷引文建置</li>
+            </ul>
+            <span class="ia-role-badge ia-role-badge--g">顧問專用</span>
+          </div>
+          <div class="ia-node ia-node--green">
+            <p class="ia-node-head">問卷平台</p>
+            <ul class="ia-node-items">
+              <li class="g">利害關係人鑑別</li>
+              <li class="g">ESG 議題鑑別</li>
+              <li class="g">年度問卷建置</li>
+              <li class="g">問卷發放 &amp; 追蹤</li>
+              <li class="g">年度問卷總覽</li>
+            </ul>
+            <span class="ia-role-badge ia-role-badge--g">顧問 + 公司窗口</span>
+          </div>
+          <div class="ia-node ia-node--green">
+            <p class="ia-node-head">重大性結果分析</p>
+            <ul class="ia-node-items">
+              <li class="g">利害關係人結果</li>
+              <li class="g">營運衝擊結果</li>
+              <li class="g">永續發展衝擊</li>
+              <li class="g">重大性議題矩陣</li>
+              <li class="g">報表產出與揭露</li>
+            </ul>
+            <span class="ia-role-badge ia-role-badge--g">顧問 + 公司窗口</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:2rem;">
+        <p style="font-size:.75rem;font-weight:600;color:var(--lmuted);margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.08em;">三份問卷類型 → 重大性矩陣</p>
+        <div class="uflow">
+          <div class="uflow-step">利害關係人問卷</div><div class="uflow-arr">+</div>
+          <div class="uflow-step">營運衝擊問卷</div><div class="uflow-arr">+</div>
+          <div class="uflow-step">外部永續問卷</div><div class="uflow-arr">→</div>
+          <div class="uflow-step" style="background:rgba(91,174,122,.1);border-color:rgba(91,174,122,.3);">重大性矩陣自動生成</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 設計過程 -->
+  <div class="cs cs-lt" style="padding-top:0;">
+    <div class="cs-inner">
+      <p class="eyebrow eyebrow-lt">05 / 設計過程</p>
+
+      <!-- A -->
+      <div class="process-sub">
+        <h3 class="cs-title">A. 三種角色如何共用同一個平台</h3>
+        <p class="process-body">最大的挑戰是讓三種需求、技術背景都不同的使用者，在同一平台上找到屬於自己的操作流程。我的解法是：依角色在登入後自動跳轉到不同首頁。顧問看到所有客戶公司的授權與進度概覽；公司窗口直接進入自己公司的年度評估首頁；填寫者則透過邀請連結進入純問卷介面，完全不需要帳號。三個入口，三個不同的使用世界，但底層共享同一套資料架構。</p>
+      </div>
+
+      <!-- B -->
+      <div class="process-sub">
+        <h3 class="cs-title">B. 標準化底層資料 × 彈性的公司客製</h3>
+        <p class="process-body">不同產業的 ESG 議題不完全相同。我設計了兩層結構：顧問在後台建置所有可能的 ESG 議題、利害關係人清單（底層資料）；公司窗口在建置年度問卷時，從清單中勾選適合自己公司的項目。這樣既保持了跨公司評估的可比性，又讓每家公司能夠客製適合自己的問卷內容，不需要顧問每次都重新從頭設計。</p>
+        <div class="uflow">
+          <div class="uflow-step">顧問建置底層清單</div><div class="uflow-arr">→</div>
+          <div class="uflow-step">公司窗口勾選適用項目</div><div class="uflow-arr">→</div>
+          <div class="uflow-step">年度問卷建置完成</div><div class="uflow-arr">→</div>
+          <div class="uflow-step">發放 &amp; 追蹤</div><div class="uflow-arr">→</div>
+          <div class="uflow-step" style="background:rgba(91,174,122,.1);border-color:rgba(91,174,122,.3);">矩陣自動生成</div>
+        </div>
+      </div>
+
+      <!-- C -->
+      <div class="process-sub">
+        <h3 class="cs-title">C. 重大性矩陣的視覺化設計</h3>
+        <p class="process-body">重大性矩陣是整個評估的核心輸出：X 軸代表議題對公司營運的衝擊程度，Y 軸代表外部利害關係人的重視程度。右上角的議題重大性最高，需要優先揭露。我設計了互動式矩陣圖，讓使用者能點擊每個議題點查看詳情，右上角以不同顏色標示出最重大的議題群，最後能直接匯出成符合 ESG 報告格式的 PDF。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 主要設計畫面 -->
+  <div class="cs cs-forest">
+    <div class="cs-inner">
+      <p class="eyebrow">06 / 主要設計畫面</p>
+      <div class="screens-grid">
+        <!-- Screen 1 -->
+        <div class="screen-wrap">
+          <div>
+            <span class="screen-label screen-label-g">畫面一</span>
+            <h4 class="screen-info-title">顧問端 — 公司授權管理</h4>
+            <p class="screen-info-body">顧問登入後看到的核心管理頁面。列出所有服務中的企業客戶、授權有效期、帳號狀態，可以快速新增公司或更新授權，掌握整體服務狀況。</p>
+          </div>
+          <div class="browser">
+            <div class="bbar bbar-lt">
+              <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
+              <div class="burl burl-lt">materiality.cris.com.tw / 系統管理 / 公司授權</div>
+            </div>
+            <div class="bscreen">
+              <div class="mm-con">
+                <div class="mm-hd">
+                  <div class="mm-icon"></div>
+                  <div class="mm-hd-txt"></div>
+                  <div class="mm-hd-sp"></div>
+                  <div class="mm-hd-user"></div>
+                </div>
+                <div class="mm-body">
+                  <p class="mm-section-title">公司授權管理</p>
+                  <div class="mm-tbl">
+                    <div class="mm-tr hd">
+                      <div class="mm-td" style="width:40%;background:#aaa;"></div>
+                      <div class="mm-td" style="width:20%;background:#aaa;"></div>
+                      <div class="mm-td" style="width:15%;background:#aaa;"></div>
+                      <div class="mm-pill mm-pill--ok"></div>
+                    </div>
+                    <div class="mm-tr">
+                      <div class="mm-td" style="width:42%"></div>
+                      <div class="mm-td" style="width:18%"></div>
+                      <div class="mm-td" style="width:12%"></div>
+                      <div class="mm-pill mm-pill--ok"></div>
+                    </div>
+                    <div class="mm-tr">
+                      <div class="mm-td" style="width:38%"></div>
+                      <div class="mm-td" style="width:20%"></div>
+                      <div class="mm-td" style="width:14%"></div>
+                      <div class="mm-pill mm-pill--exp"></div>
+                    </div>
+                    <div class="mm-tr">
+                      <div class="mm-td" style="width:44%"></div>
+                      <div class="mm-td" style="width:16%"></div>
+                      <div class="mm-td" style="width:13%"></div>
+                      <div class="mm-pill mm-pill--ok"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Screen 2 -->
+        <div class="screen-wrap">
+          <div>
+            <span class="screen-label screen-label-g">畫面二</span>
+            <h4 class="screen-info-title">公司窗口 — 年度問卷總覽</h4>
+            <p class="screen-info-body">公司窗口的主要工作頁面。三份問卷各自以卡片呈現，清楚顯示回收進度、未填寫人數，可以直接發送提醒或查看個別填寫狀態，不需要切換多個畫面。</p>
+          </div>
+          <div class="browser">
+            <div class="bbar bbar-lt">
+              <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
+              <div class="burl burl-lt">materiality.cris.com.tw / 問卷平台 / 年度問卷總覽</div>
+            </div>
+            <div class="bscreen">
+              <div class="mm-qov">
+                <div class="mm-qov-hd">
+                  <div class="mm-icon"></div>
+                  <div class="mm-hd-txt"></div>
+                  <div class="mm-hd-sp"></div>
+                </div>
+                <div class="mm-qov-body">
+                  <div class="mm-qcard">
+                    <div class="mm-qcard-head"><div class="mm-qcard-dot mm-qcard-dot--a"></div><div class="mm-qcard-title"></div><div class="mm-qcard-sp"></div><div class="mm-qcard-badge"></div></div>
+                    <div class="mm-prog-row"><div class="mm-prog-lbl"></div><div class="mm-prog-track"><div class="mm-prog-fill" style="width:72%"></div></div><div class="mm-prog-num">18/25</div></div>
+                  </div>
+                  <div class="mm-qcard">
+                    <div class="mm-qcard-head"><div class="mm-qcard-dot mm-qcard-dot--b"></div><div class="mm-qcard-title"></div><div class="mm-qcard-sp"></div><div class="mm-qcard-badge"></div></div>
+                    <div class="mm-prog-row"><div class="mm-prog-lbl"></div><div class="mm-prog-track"><div class="mm-prog-fill" style="width:45%"></div></div><div class="mm-prog-num">9/20</div></div>
+                  </div>
+                  <div class="mm-qcard">
+                    <div class="mm-qcard-head"><div class="mm-qcard-dot mm-qcard-dot--c"></div><div class="mm-qcard-title"></div><div class="mm-qcard-sp"></div><div class="mm-qcard-badge" style="background:#FFF0EC;"></div></div>
+                    <div class="mm-prog-row"><div class="mm-prog-lbl"></div><div class="mm-prog-track"><div class="mm-prog-fill" style="width:100%"></div></div><div class="mm-prog-num">12/12</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Screen 3 -->
+        <div class="screen-wrap">
+          <div>
+            <span class="screen-label screen-label-g">畫面三</span>
+            <h4 class="screen-info-title">重大性矩陣結果頁</h4>
+            <p class="screen-info-body">評估完成後自動生成的核心輸出畫面。X 軸為公司重要性，Y 軸為外部衝擊重要性，右上角的議題重大性最高。點擊各議題點可查看詳情，完成後可一鍵匯出 PDF 報告。</p>
+          </div>
+          <div class="browser">
+            <div class="bbar bbar-lt">
+              <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
+              <div class="burl burl-lt">materiality.cris.com.tw / 結果分析 / 重大性矩陣</div>
+            </div>
+            <div class="bscreen">
+              <div class="mm-mtx">
+                <div class="mm-mtx-hd">
+                  <div class="mm-icon"></div>
+                  <div class="mm-hd-txt"></div>
+                  <div class="mm-hd-sp"></div>
+                  <div style="width:50px;height:14px;background:#5BAE7A;border-radius:3px;opacity:.85;"></div>
+                </div>
+                <div class="mm-mtx-body">
+                  <div class="mm-mtx-plot">
+                    <div class="mm-mtx-quadrant"></div>
+                    <span class="mm-mtx-x-lbl">公司重要性 →</span>
+                    <span class="mm-mtx-y-lbl">外部衝擊重要性 ↑</span>
+                    <!-- dots: left=x%, bottom=y% from bottom -->
+                    <div class="mm-dot mm-dot--hi" style="left:78%;bottom:82%;"></div>
+                    <div class="mm-dot mm-dot--hi" style="left:85%;bottom:70%;"></div>
+                    <div class="mm-dot mm-dot--hi" style="left:72%;bottom:75%;"></div>
+                    <div class="mm-dot mm-dot--md" style="left:60%;bottom:55%;"></div>
+                    <div class="mm-dot mm-dot--md" style="left:50%;bottom:72%;"></div>
+                    <div class="mm-dot mm-dot--md" style="left:40%;bottom:60%;"></div>
+                    <div class="mm-dot mm-dot--lo" style="left:25%;bottom:35%;"></div>
+                    <div class="mm-dot mm-dot--lo" style="left:35%;bottom:25%;"></div>
+                    <div class="mm-dot mm-dot--lo" style="left:20%;bottom:55%;"></div>
+                    <div class="mm-dot mm-dot--lo" style="left:55%;bottom:30%;"></div>
+                  </div>
+                  <div class="mm-mtx-legend">
+                    <div class="mm-leg-item"><div class="mm-leg-dot" style="background:#D4956A;width:8px;height:8px;"></div><div class="mm-leg-txt">高重大性議題</div></div>
+                    <div class="mm-leg-item"><div class="mm-leg-dot" style="background:#5BAE7A;"></div><div class="mm-leg-txt">中度重大</div></div>
+                    <div class="mm-leg-item"><div class="mm-leg-dot" style="background:#7A8FD4;width:5px;height:5px;"></div><div class="mm-leg-txt">低重大性</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 設計亮點 -->
+  <div class="cs cs-lt">
+    <div class="cs-inner">
+      <p class="eyebrow eyebrow-lt">07 / 設計亮點</p>
+      <h3 class="cs-title">從 0 到 1 最關鍵的三個設計決策</h3>
+      <div class="highlight-grid">
+        <div class="hl-card">
+          <span class="hl-num hl-num-g">亮點 01</span>
+          <p class="hl-title">無帳號問卷體驗</p>
+          <p class="hl-body hl-body-lt">填寫者透過電子郵件連結直接進入問卷，不需要帳號或密碼。介面極簡，針對手機優化，一個題目一個頁面，降低填寫門檻、提高回收率。填寫者不需要了解平台的任何其他功能。</p>
+        </div>
+        <div class="hl-card">
+          <span class="hl-num hl-num-g">亮點 02</span>
+          <p class="hl-title">顧問的底層資料策略</p>
+          <p class="hl-body hl-body-lt">顧問可以為不同產業預建 ESG 議題、利害關係人、評分項目的清單範本。公司窗口建置年度問卷時只需從清單中勾選，省去每次從頭設計問卷的時間，同時確保跨公司結果的可比性。</p>
+        </div>
+        <div class="hl-card">
+          <span class="hl-num hl-num-g">亮點 03</span>
+          <p class="hl-title">矩陣 × 報表一鍵匯出</p>
+          <p class="hl-body hl-body-lt">評估結果能直接匯出成符合 ESG 報告揭露格式的 PDF，包含重大性矩陣圖、議題清單與評分說明，大幅減少顧問手動整理報告的時間，也讓企業能更快完成每年的法遵作業。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section><!-- /materiality -->
+
+<!-- ══ CONTACT ════════════════════════════════════════════════════ -->
+<section id="contact" class="cs cs-dk contact">
+  <div>
+    <p class="eyebrow" style="margin-bottom:1.5rem;">聯絡</p>
+    <h2 class="contact-title">有新的專案，<br>找<span>我</span>聊聊。</h2>
+    <p class="contact-p">我喜歡在設計裡找到邏輯，讓複雜的資訊變得容易理解。如果你手上有需要從頭規劃的系統，歡迎聯絡。</p>
+    <a href="mailto:cg19931227@gmail.com" class="contact-mail">cg19931227@gmail.com</a>
+  </div>
+  <div class="contact-year" aria-hidden="true">2026</div>
+</section>
+
+<footer>
+  <span class="ft">Cindy · UIUX Designer</span>
+  <span class="ft">B2B SaaS · ESG Platform · 2024–2026</span>
+</footer>
