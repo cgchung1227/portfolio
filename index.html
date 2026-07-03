@@ -496,7 +496,7 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
       <div class="overview-grid">
         <div>
           <h3 class="cs-title">讓製造業能追蹤到每一款產品的碳排放</h3>
-          <p class="cs-body">這個模組是整個碳盤查平台中技術難度最高的部分。製造業企業需要依照 ISO 14067 標準，追蹤每款產品從原料取得到廢棄處置的完整碳足跡——我負責從資訊架構規劃、使用者流程設計，到每一個互動細節的完整設計，並主導了數據品質評估功能的 v1 到 v2 迭代。</p>
+          <p class="cs-body">一套給製造業用的碳足跡計算工具。企業需要追蹤每一款產品從生產到報廢的全程碳排放，填報到政府或客戶要求的格式裡。我負責這個模組從無到有的完整設計，包含資訊架構、使用者流程，以及數據品質評估功能的 v1 到 v2 迭代。</p>
         </div>
         <div class="fact-grid">
           <div class="fact-box"><div class="fact-num fact-num--amber">2</div><div class="fact-desc">功能版本迭代</div></div>
@@ -523,7 +523,7 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
         <div class="pain-card">
           <span class="pain-num">痛點 02</span>
           <p class="pain-head">流程複雜</p>
-          <p class="pain-body">ISO 14067 要求追蹤五個生命週期階段，每個階段的資料欄位和計算邏輯都不同，使用者難以掌握整體流程。</p>
+          <p class="pain-body">產品碳足跡的計算規範要求追蹤五個生命週期階段，每個階段的資料欄位和計算邏輯都不同，使用者難以掌握整體流程。</p>
         </div>
         <div class="pain-card">
           <span class="pain-num">痛點 03</span>
@@ -631,10 +631,11 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
   <div class="cs cs--white">
     <div class="cs-inner">
       <p class="section-label">05 · 設計過程</p>
+      <p class="cs-body" style="margin-bottom:2.5rem;">開始設計之前，我得先搞清楚「產品碳足跡計算」是什麼。第一次和使用者訪談，對方提到碳係數、排放源分類、生命週期邊界，我一個都聽不懂。花了幾週補完背景知識，才在下一次訪談時真正聽懂使用者卡在哪裡——哪些流程複雜是法規必要的，哪些只是系統長期累積的歷史包袱。這個過程讓我改了好幾次訪談問題，也推翻了幾個最初的設計假設。</p>
 
       <div class="process-sub">
         <h3 class="process-title">A. 如何呈現五個生命週期階段</h3>
-        <p class="process-body">ISO 14067 要求分別追蹤五個階段：原料取得、生產製造、運輸配銷、產品使用、廢棄處置。每個階段欄位不同，如果同時展開顯示頁面會極度複雜。我選擇 Tab 切換，讓使用者一次專注在一個階段，Tab 狀態同時提示整體完成度。</p>
+        <p class="process-body">計算規範要求分別追蹤五個階段：原料取得、生產製造、運輸配銷、產品使用、廢棄處置——可以理解成一件產品「從出生到報廢」每個環節的碳排放。每個階段欄位不同，如果同時展開頁面會極度複雜。我選擇 Tab 切換，讓使用者一次專注在一個階段，Tab 狀態同時提示整體完成度。</p>
         <div class="browser">
           <div class="bbar bbar-dk">
             <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
@@ -675,7 +676,7 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
 
       <div class="process-sub">
         <h3 class="process-title">C. 數據品質評估：v1 → v2 迭代</h3>
-        <p class="process-body">v1 版本是獨立頁面，使用者需另外跳轉才能評分，問題是看不到原始填寫的數據，難以判斷。v2 版本將 DQR 整合進各階段 Tab，填完數據後就能在同一頁面評估品質。</p>
+        <p class="process-body">v1 版本是獨立頁面，使用者需另外跳轉才能評分，問題是看不到原始填寫的數據，難以判斷要給幾分。v2 版本將數據品質評分（DQR）整合進各階段 Tab，填完數據後就能在同一頁面評估，不需要再跳來跳去。</p>
         <div class="compare-grid">
           <div>
             <p class="compare-version">v1 — 獨立頁面（問題版本）</p>
@@ -808,7 +809,7 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
       <div class="overview-grid">
         <div>
           <h3 class="cs-title">把重大性評估的全流程數位化</h3>
-          <p class="cs-body">受顧問公司委託，從零開始設計一個完整的 ESG 重大性評估平台。讓顧問公司能為多家企業客戶管理評估的全流程——從底層資料建置、問卷設定與發放，到利害關係人回收追蹤，最後自動生成重大性矩陣與揭露報表。</p>
+          <p class="cs-body">受顧問公司委託，從零設計一個 ESG 評估平台。每年企業需要決定「今年最重要的 ESG 議題是什麼」，這個過程叫做重大性評估，要收集來自公司內外各方的意見，最後整理成一張優先排序圖（重大性矩陣）對外揭露。這個平台讓顧問公司能統一管理旗下所有企業客戶的整套流程。</p>
         </div>
         <div class="fact-grid">
           <div class="fact-box"><div class="fact-num fact-num--green">4</div><div class="fact-desc">系統模組</div></div>
@@ -825,7 +826,7 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
     <div class="cs-inner">
       <p class="section-label">02 · 問題背景</p>
       <h3 class="cs-title">傳統 Excel 流程的三個斷點</h3>
-      <p class="cs-body">ESG 重大性評估是企業每年必須完成的法遵任務，需要收集管理層、員工和外部利害關係人的評分意見。傳統靠 Excel 或紙本作業，在三個環節上造成大量人工成本：</p>
+      <p class="cs-body">企業每年都必須完成這個評估才能符合 ESG 報告的揭露要求。過程需要收集來自公司內外各方——管理層、員工、客戶、投資人——的意見，傳統靠 Excel 或紙本作業，每年都要耗費大量人工：</p>
       <div class="pain-grid">
         <div class="pain-card">
           <span class="pain-num">痛點 01</span>
@@ -949,6 +950,7 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
   <div class="cs cs--white">
     <div class="cs-inner">
       <p class="section-label">05 · 設計過程</p>
+      <p class="cs-body" style="margin-bottom:2.5rem;">這個專案讓我遇到和碳足跡模組一樣的問題：domain 完全不熟。「重大性」這個概念在 ESG 裡有很精確的定義，但我一開始根本不知道它跟一般人說的「重要」有什麼不同。第一輪訪談做完，顧問給我的回饋是「問的方向有點偏」——我問的是操作流程，但其實真正的問題在評估邏輯本身。補完背景知識、重新設計訪談問題、再做一輪，才真正找到設計切入點。</p>
 
       <div class="process-sub">
         <h3 class="process-title">A. 三種角色如何共用同一個平台</h3>
@@ -962,7 +964,7 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
 
       <div class="process-sub">
         <h3 class="process-title">C. 重大性矩陣的視覺化設計</h3>
-        <p class="process-body">重大性矩陣是整個評估的核心輸出：X 軸代表對公司營運的衝擊程度，Y 軸代表外部利害關係人的重視程度。右上角的議題重大性最高，需要優先揭露。設計了互動式矩陣圖，點擊議題點可查看詳情，完成後能直接匯出成符合 ESG 報告格式的 PDF。</p>
+        <p class="process-body">矩陣圖是整個評估的最終輸出——一張散點圖，X 軸是「這件事對公司有多大影響」，Y 軸是「外部各方有多在意這件事」，右上角的議題就是最需要優先處理的。使用者要能看懂這張圖、能點進去查看每個議題的細節，最後能匯出成 PDF 放進年度報告。我設計了互動式的矩陣圖，右上角的高優先議題用顏色和大小區分，確保一眼就能抓到重點。</p>
       </div>
     </div>
   </div>
