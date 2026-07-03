@@ -58,12 +58,6 @@ a{color:inherit;text-decoration:none;}
 .pcard--mat .pcard-title,.pcard--mat .pcard-arrow{color:var(--green);}
 .pcard--carbon{background:var(--amber-bg);border-color:var(--amber-bd);}
 .pcard--mat{background:var(--green-bg);border-color:var(--green-bd);}
-.pcard--app .pcard-title,.pcard--app .pcard-arrow{color:var(--blue);}
-.pcard--app{background:var(--blue-bg);border-color:var(--blue-bd);}
-.hero-also{max-width:640px;margin-top:1.5rem;}
-.hero-also-label{font-size:.7rem;color:var(--faint);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem;display:flex;align-items:center;gap:.75rem;}
-.hero-also-label::before,.hero-also-label::after{content:'';flex:1;height:1px;background:var(--border);}
-.hero-also-label::before{flex:0 0 0;}
 
 /* ABOUT */
 .about{padding:6rem 3rem;background:var(--bg2);}
@@ -322,67 +316,12 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
 .ml-leg-dot{border-radius:50%;flex-shrink:0;}
 .ml-leg-txt{font-size:.3rem;color:#6B6660;line-height:1.3;}
 
-/* PROJ HERO blue */
-.proj-hero--app{background:var(--blue-bg);}
-.proj-tag--app{border-color:var(--blue-bd);color:var(--blue);}
-.screen-tag--blue{color:var(--blue);}
-
-/* PHONE FRAME */
-.phone-wrap{display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;}
-.phone{width:160px;flex-shrink:0;}
-.phone-frame{border-radius:22px;overflow:hidden;box-shadow:var(--shadow2),0 0 0 1px rgba(28,27,30,.1);background:#F0EFF4;position:relative;}
-.phone-notch{height:20px;background:#F0EFF4;display:flex;justify-content:center;align-items:flex-end;padding-bottom:3px;}
-.phone-notch-pill{width:48px;height:5px;background:#1C1B1E;border-radius:3px;opacity:.15;}
-.phone-screen{background:#fff;min-height:280px;display:flex;flex-direction:column;overflow:hidden;}
-.phone-home-bar{height:14px;background:#F0EFF4;display:flex;justify-content:center;align-items:center;}
-.phone-home-dot{width:36px;height:3px;background:#1C1B1E;border-radius:2px;opacity:.15;}
-.phone-label{text-align:center;font-size:.7rem;color:var(--muted);margin-top:.625rem;}
-
-/* Phone: 配對步驟 */
-.ph-status{height:22px;background:#fff;display:flex;align-items:center;padding:0 .75rem;gap:.35rem;}
-.ph-status-t{font-size:.38rem;color:#333;opacity:.4;flex:1;}
-.ph-status-i{width:14px;height:8px;background:#1C1B1E;border-radius:1px;opacity:.12;}
-.ph-progress{height:3px;background:#EBEBEB;margin:0;}
-.ph-progress-fill{height:100%;border-radius:2px;}
-.ph-progress-fill--b{background:var(--blue);}
-.ph-progress-fill--grey{background:#ccc;}
-.ph-content{flex:1;padding:.75rem .625rem;display:flex;flex-direction:column;align-items:center;gap:.5rem;}
-.ph-icon-wrap{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:.125rem;}
-.ph-icon-wrap--b{background:var(--blue-bg);}
-.ph-icon{font-size:1.25rem;line-height:1;}
-.ph-step-title{font-size:.5rem;font-weight:600;color:#1C1B1E;text-align:center;line-height:1.4;}
-.ph-step-body{font-size:.42rem;color:#6B6660;text-align:center;line-height:1.5;}
-.ph-illus{width:80px;height:56px;border-radius:8px;background:var(--blue-bg);display:flex;align-items:center;justify-content:center;}
-.ph-illus-inner{width:52px;height:36px;border-radius:5px;border:2px solid var(--blue);opacity:.5;}
-.ph-btn{width:100%;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.45rem;margin-top:.25rem;}
-.ph-btn--b{background:var(--blue);color:#fff;}
-.ph-btn--ghost{background:transparent;border:1px solid var(--border);color:var(--muted);}
-.ph-old-step{width:100%;background:#FBF3EC;border-radius:6px;padding:.5rem .625rem;display:flex;gap:.5rem;align-items:flex-start;}
-.ph-old-num{width:14px;height:14px;border-radius:50%;background:#E0D8D0;display:flex;align-items:center;justify-content:center;font-size:.36rem;color:#6B6660;flex-shrink:0;}
-.ph-old-txt{font-size:.42rem;color:#6B6660;line-height:1.5;}
-.ph-old-badge{height:10px;border-radius:3px;background:rgba(184,110,59,.2);padding:0 .35rem;display:inline-flex;align-items:center;font-size:.32rem;color:#B86E3B;}
-
-/* DS preview */
-.ds-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;}
-.ds-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.25rem;}
-.ds-card-title{font-size:.7rem;color:var(--faint);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.875rem;}
-.ds-color-row{display:flex;gap:.375rem;margin-bottom:.25rem;}
-.ds-swatch{width:22px;height:22px;border-radius:4px;}
-.ds-type-row{display:flex;flex-direction:column;gap:.375rem;}
-.ds-type-sample{display:flex;align-items:baseline;gap:.5rem;}
-.ds-type-lbl{font-size:.625rem;color:var(--faint);width:36px;flex-shrink:0;}
-.ds-comp-row{display:flex;flex-wrap:wrap;gap:.5rem;}
-.ds-comp{height:22px;border-radius:5px;display:flex;align-items:center;padding:0 .625rem;font-size:.45rem;}
-.ds-comp--pri{background:var(--blue);color:#fff;}
-.ds-comp--sec{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-bd);}
-.ds-comp--ghost{background:transparent;border:1px solid var(--border);color:var(--muted);}
-.ds-comp--tag{background:var(--bg2);color:var(--muted);font-size:.4rem;}
-
 /* RESPONSIVE */
 @media(max-width:900px){
   .nav{padding:1rem 1.5rem;}
   .hero,.about,.cs,.proj-hero,.contact{padding-left:1.5rem;padding-right:1.5rem;}
   .hero-projects,.overview-grid,.about-inner,.pain-grid,.user-grid,.ia-row--2,.ia-row--4,.compare-grid,.status-grid,.highlight-grid,.screen-wrap{grid-template-columns:1fr;}
+  .shots-3col{grid-template-columns:1fr !important;}
   .contact-inner{text-align:left;}
   footer{padding:1.25rem 1.5rem;flex-direction:column;gap:.3rem;align-items:flex-start;}
 }
@@ -395,7 +334,6 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
     <a href="#about" class="nav-link">關於我</a>
     <a href="#carbon" class="nav-link">碳足跡方案</a>
     <a href="#materiality" class="nav-link">重大性平台</a>
-    <a href="#app" class="nav-link">育嬰 App</a>
     <a href="#contact" class="nav-link">聯絡</a>
   </div>
 </nav>
@@ -420,31 +358,6 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
         <p class="pcard-arrow">查看案例 →</p>
       </a>
     </div>
-    <div class="hero-also">
-      <p class="hero-also-label">也做過 2C</p>
-      <a href="#app" class="pcard pcard--app">
-        <p class="pcard-num">03</p>
-        <p class="pcard-title">育嬰照護 App</p>
-        <p class="pcard-sub">硬體配對流程優化 · Design System · 2022–2023</p>
-        <p class="pcard-arrow">查看案例 →</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="about">
-  <div class="about-inner">
-    <div>
-      <p class="section-label">關於我</p>
-      <h2 class="about-title">從人資到<br>UIUX Designer</h2>
-      <p class="about-body">在做設計之前，我在人資領域工作了五年多。那段時間讓我習慣從「人」的角度思考問題——訪談、理解需求、找到真正的痛點，而不是表面上說出來的那個。</p>
-      <p class="about-body">2022 年轉職 UIUX 之後，這個背景意外地很有用。做 B2B 系統的時候，使用者往往說不清楚自己真正需要什麼，這時候怎麼問比怎麼畫更重要。</p>
-      <p class="about-body" style="color:var(--muted);">現在我在做的是 ESG 領域的企業 SaaS，把法規要求、複雜流程和真實的使用者行為整合成可以用的產品。</p>
-      <div class="cert-badge">
-        <div class="cert-icon"></div>
-        Google UX Design Certificate
-      </div>
     </div>
     <div>
       <p class="section-label">核心特質</p>
@@ -751,6 +664,47 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
             </div>
           </div>
         </div>
+      <div class="process-sub">
+        <h3 class="process-title">D. 系統截圖（已去識別化）</h3>
+        <p class="process-body">以下為實際系統截圖，敏感資訊已遮蔽。</p>
+        <div class="shots-3col" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;margin-top:1.25rem;">
+          <div>
+            <p style="font-size:.75rem;color:var(--muted);margin-bottom:.5rem;">溫室氣體排放總覽</p>
+            <div class="browser">
+              <div class="bbar bbar-dk">
+                <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
+                <div class="burl burl-dk">carbon-footprint.app / 排放總覽</div>
+              </div>
+              <div class="bscreen" style="padding:0;">
+                <img src="images/carbon-dashboard.png" style="width:100%;height:100%;object-fit:cover;object-position:top;" alt="溫室氣體排放總覽">
+              </div>
+            </div>
+          </div>
+          <div>
+            <p style="font-size:.75rem;color:var(--muted);margin-bottom:.5rem;">組織盤查範疇三</p>
+            <div class="browser">
+              <div class="bbar bbar-dk">
+                <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
+                <div class="burl burl-dk">carbon-footprint.app / 組織盤查 / 範疇三</div>
+              </div>
+              <div class="bscreen" style="padding:0;">
+                <img src="images/carbon-scope3.png" style="width:100%;height:100%;object-fit:cover;object-position:top;" alt="組織盤查範疇三">
+              </div>
+            </div>
+          </div>
+          <div>
+            <p style="font-size:.75rem;color:var(--muted);margin-bottom:.5rem;">排放源鑑別設定</p>
+            <div class="browser">
+              <div class="bbar bbar-dk">
+                <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
+                <div class="burl burl-dk">carbon-footprint.app / 資產設定</div>
+              </div>
+              <div class="bscreen" style="padding:0;">
+                <img src="images/carbon-assets.png" style="width:100%;height:100%;object-fit:cover;object-position:top;" alt="排放源鑑別資產設定">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -809,7 +763,7 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
       <div class="overview-grid">
         <div>
           <h3 class="cs-title">把重大性評估的全流程數位化</h3>
-          <p class="cs-body">受顧問公司委託，從零設計一個 ESG 評估平台。每年企業需要決定「今年最重要的 ESG 議題是什麼」，這個過程叫做重大性評估，要收集來自公司內外各方的意見，最後整理成一張優先排序圖（重大性矩陣）對外揭露。這個平台讓顧問公司能統一管理旗下所有企業客戶的整套流程。</p>
+          <p class="cs-body">受顧問公司委託，從零設計一個 ESG 評估平台。每年企業需要決定「今年最重要的 ESG 議題是什麼」，這個過程叫做重大性評估，要收集來自公司內外各方的意見，最後整理成一張優先排序圖（重大性矩陣）對外揭露。設計範圍涵蓋兩個系統：<strong>問卷後台</strong>（顧問與公司窗口使用，負責設定議題、發放問卷、追蹤進度），以及<strong>問卷前台</strong>（利害關係人填寫體驗，無帳號、連結直達），讓顧問公司能統一管理旗下所有企業客戶的整套流程。</p>
         </div>
         <div class="fact-grid">
           <div class="fact-box"><div class="fact-num fact-num--green">4</div><div class="fact-desc">系統模組</div></div>
@@ -953,8 +907,8 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
       <p class="cs-body" style="margin-bottom:2.5rem;">這個專案讓我遇到和碳足跡模組一樣的問題：domain 完全不熟。「重大性」這個概念在 ESG 裡有很精確的定義，但我一開始根本不知道它跟一般人說的「重要」有什麼不同。第一輪訪談做完，顧問給我的回饋是「問的方向有點偏」——我問的是操作流程，但其實真正的問題在評估邏輯本身。補完背景知識、重新設計訪談問題、再做一輪，才真正找到設計切入點。</p>
 
       <div class="process-sub">
-        <h3 class="process-title">A. 三種角色如何共用同一個平台</h3>
-        <p class="process-body">最大的挑戰是讓需求完全不同的三種使用者，在同一平台上找到屬於自己的流程。解法是依角色在登入後自動跳轉到不同首頁——顧問看到所有客戶的授權與進度概覽；公司窗口直接進入自己公司的年度評估首頁；填寫者透過邀請連結進入純問卷介面，完全不需要帳號。三個入口，三個不同的使用世界，底層共享同一套資料架構。</p>
+        <h3 class="process-title">A. 前台 × 後台：同時設計兩套系統</h3>
+        <p class="process-body">這個專案實際上包含兩個系統要同時設計。<br><br>後台是有帳號的管理介面：顧問端負責建置 ESG 議題底層資料庫、管理多家企業客戶；公司窗口端負責建置年度問卷、發送邀請連結、追蹤各類型問卷的回收進度。兩個角色共用同一套後台，但登入後跳轉到不同的首頁，避免互相干擾。<br><br>前台是無帳號的填寫介面：利害關係人收到邀請信後點連結直接進入，不需要任何帳號或密碼。介面刻意保持最低複雜度——沒有導覽列、沒有設定項目、一個頁面只有一道題，手機也能順暢填寫，填完就關掉。前後台設計語言同源，但使用者心理模型完全不同，分開設計才不會互相污染。</p>
       </div>
 
       <div class="process-sub">
@@ -1011,26 +965,10 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
           <div class="browser">
             <div class="bbar bbar-lt">
               <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
-              <div class="burl burl-lt">materiality.app / 問卷平台 / 年度問卷總覽</div>
+              <div class="burl burl-lt">materiality.app / 問卷平台 / 年度問卷建置</div>
             </div>
-            <div class="bscreen">
-              <div class="ml-qov">
-                <div class="ml-qov-hd"><div class="ml-logo"></div><div class="ml-hd-t"></div><div class="ml-sp"></div></div>
-                <div class="ml-qov-bd">
-                  <div class="ml-qcard">
-                    <div class="ml-qcard-hd"><div class="ml-qdot ml-qdot--a"></div><div class="ml-qtitle"></div><div class="ml-qsp"></div><div class="ml-qbadge"></div></div>
-                    <div class="ml-prog-row"><div class="ml-prog-lbl"></div><div class="ml-prog-track"><div class="ml-prog-fill" style="width:72%"></div></div><div class="ml-prog-num">18/25</div></div>
-                  </div>
-                  <div class="ml-qcard">
-                    <div class="ml-qcard-hd"><div class="ml-qdot ml-qdot--b"></div><div class="ml-qtitle"></div><div class="ml-qsp"></div><div class="ml-qbadge"></div></div>
-                    <div class="ml-prog-row"><div class="ml-prog-lbl"></div><div class="ml-prog-track"><div class="ml-prog-fill" style="width:45%"></div></div><div class="ml-prog-num">9/20</div></div>
-                  </div>
-                  <div class="ml-qcard">
-                    <div class="ml-qcard-hd"><div class="ml-qdot ml-qdot--c"></div><div class="ml-qtitle"></div><div class="ml-qsp"></div><div class="ml-qbadge" style="background:#FFF0EC;"></div></div>
-                    <div class="ml-prog-row"><div class="ml-prog-lbl"></div><div class="ml-prog-track"><div class="ml-prog-fill" style="width:100%"></div></div><div class="ml-prog-num">12/12</div></div>
-                  </div>
-                </div>
-              </div>
+            <div class="bscreen" style="padding:0;">
+              <img src="images/mat-questionnaire.png" style="width:100%;height:100%;object-fit:cover;object-position:top;" alt="年度問卷建置截圖">
             </div>
           </div>
         </div>
@@ -1046,31 +984,8 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
               <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
               <div class="burl burl-lt">materiality.app / 結果分析 / 重大性矩陣</div>
             </div>
-            <div class="bscreen">
-              <div class="ml-mtx">
-                <div class="ml-mtx-hd"><div class="ml-logo"></div><div class="ml-hd-t"></div><div class="ml-sp"></div><div style="width:48px;height:13px;background:#3A845A;border-radius:3px;opacity:.8;"></div></div>
-                <div class="ml-mtx-bd">
-                  <div class="ml-mtx-plot">
-                    <div class="ml-mtx-q"></div>
-                    <span class="ml-mtx-xl">公司重要性 →</span>
-                    <span class="ml-mtx-yl">外部衝擊 ↑</span>
-                    <div class="ml-dot ml-dot--hi" style="left:78%;bottom:82%;"></div>
-                    <div class="ml-dot ml-dot--hi" style="left:85%;bottom:70%;"></div>
-                    <div class="ml-dot ml-dot--hi" style="left:72%;bottom:75%;"></div>
-                    <div class="ml-dot ml-dot--md" style="left:60%;bottom:55%;"></div>
-                    <div class="ml-dot ml-dot--md" style="left:50%;bottom:72%;"></div>
-                    <div class="ml-dot ml-dot--md" style="left:40%;bottom:60%;"></div>
-                    <div class="ml-dot ml-dot--lo" style="left:25%;bottom:35%;"></div>
-                    <div class="ml-dot ml-dot--lo" style="left:35%;bottom:25%;"></div>
-                    <div class="ml-dot ml-dot--lo" style="left:20%;bottom:52%;"></div>
-                  </div>
-                  <div class="ml-mtx-leg">
-                    <div class="ml-leg-item"><div class="ml-leg-dot" style="width:8px;height:8px;background:#B86E3B;"></div><div class="ml-leg-txt">高重大性</div></div>
-                    <div class="ml-leg-item"><div class="ml-leg-dot" style="width:7px;height:7px;background:#3A845A;"></div><div class="ml-leg-txt">中度重大</div></div>
-                    <div class="ml-leg-item"><div class="ml-leg-dot" style="width:5px;height:5px;background:#5B77BE;"></div><div class="ml-leg-txt">低重大性</div></div>
-                  </div>
-                </div>
-              </div>
+            <div class="bscreen" style="padding:0;">
+              <img src="images/mat-matrix.png" style="width:100%;height:100%;object-fit:cover;object-position:top;" alt="重大性矩陣結果截圖">
             </div>
           </div>
         </div>
@@ -1105,230 +1020,6 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
 
 </section>
 
-<!-- ══ PROJECT 3: 育嬰照護 App ══ -->
-<section id="app">
-
-  <div class="proj-hero proj-hero--app">
-    <div class="proj-hero-inner">
-      <div class="proj-tags">
-        <span class="proj-tag proj-tag--app">2C · 消費性產品</span>
-        <span class="proj-tag proj-tag--app">Mobile App</span>
-        <span class="proj-tag proj-tag--app">2022–2023</span>
-      </div>
-      <h2 class="proj-title">育嬰照護 App</h2>
-      <p class="proj-subtitle">硬體配對流程優化 · Design System 建立</p>
-      <div class="proj-meta-row">
-        <div><span class="meta-k">角色</span><span class="meta-v">UIUX Designer</span></div>
-        <div><span class="meta-k">平台</span><span class="meta-v">iOS · Android</span></div>
-        <div><span class="meta-k">時程</span><span class="meta-v">2022–2023</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 01 專案概覽 -->
-  <div class="cs cs--white">
-    <div class="cs-inner">
-      <p class="section-label">01 · 專案概覽</p>
-      <div class="overview-grid">
-        <div>
-          <h3 class="cs-title">給新手爸媽用的育嬰健康監測 App</h3>
-          <p class="cs-body">這個 App 搭配兩個自家硬體裝置使用：一個放在嬰兒床邊的照護站，以及貼在寶寶身上的照護貼片，可以即時監測寶寶的生命跡象。我負責的核心工作是裝置配對流程的 UX 優化，以及整套 Design System 的從零建立。</p>
-        </div>
-        <div class="fact-grid">
-          <div class="fact-box"><div class="fact-num" style="color:var(--blue);">2</div><div class="fact-desc">硬體裝置配對</div></div>
-          <div class="fact-box"><div class="fact-num" style="color:var(--blue);">1</div><div class="fact-desc">Design System 建立</div></div>
-          <div class="fact-box"><div class="fact-num" style="color:var(--blue);">新手</div><div class="fact-desc">目標族群：新手爸媽</div></div>
-          <div class="fact-box"><div class="fact-num" style="color:var(--blue);">EN</div><div class="fact-desc">英文版本設計</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 02 問題背景 -->
-  <div class="cs cs--grey">
-    <div class="cs-inner">
-      <p class="section-label">02 · 問題背景</p>
-      <h3 class="cs-title">硬體配對，對新手爸媽來說太難了</h3>
-      <p class="cs-body">App 需要引導使用者完成兩個硬體裝置的配對——照護站和照護貼片。原本的流程設計對有技術背景的人勉強能用，但這個產品的核心族群是剛升格的新手爸媽：他們可能是第一次用這類裝置、可能正在照顧新生兒、可能沒有耐心看完長段文字說明。</p>
-      <div class="pain-grid">
-        <div class="pain-card">
-          <span class="pain-num">痛點 01</span>
-          <p class="pain-head">流程繁瑣</p>
-          <p class="pain-body">原有配對流程步驟過多，中間需要切換多個畫面，容易在中途放棄。</p>
-        </div>
-        <div class="pain-card">
-          <span class="pain-num">痛點 02</span>
-          <p class="pain-head">QR Code 容易掃錯</p>
-          <p class="pain-body">設備上的 QR Code 位置不明顯，加上使用者通常在昏暗的嬰兒房操作，掃描失敗率高。</p>
-        </div>
-        <div class="pain-card">
-          <span class="pain-num">痛點 03</span>
-          <p class="pain-head">文字說明過多</p>
-          <p class="pain-body">畫面充滿文字說明，目標族群沒有時間也沒有精力逐字閱讀，需要改用圖示引導。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 03 設計過程 -->
-  <div class="cs cs--white">
-    <div class="cs-inner">
-      <p class="section-label">03 · 設計過程</p>
-      <h3 class="cs-title">配對流程 Before / After</h3>
-      <p class="cs-body" style="margin-bottom:2rem;">核心策略是：減少步驟、減少文字、用圖示說話。把每一步的動作做到最小，讓使用者每個畫面只需要做一件事，不需要同時理解多個指示。</p>
-
-      <div class="compare-grid">
-        <div>
-          <p class="compare-version">優化前 — 問題版本</p>
-          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-            <!-- 舊版手機 1 -->
-            <div class="phone">
-              <div class="phone-frame">
-                <div class="phone-notch"><div class="phone-notch-pill"></div></div>
-                <div class="phone-screen">
-                  <div class="ph-status"><div class="ph-status-t"></div><div class="ph-status-i"></div></div>
-                  <div class="ph-progress"><div class="ph-progress-fill ph-progress-fill--grey" style="width:30%"></div></div>
-                  <div class="ph-content">
-                    <div style="width:100%;background:#FBF3EC;border-radius:6px;padding:.5rem .625rem;">
-                      <div style="font-size:.4rem;color:#6B6660;line-height:1.6;">步驟 1：請先確認您的照護站已插電並等待指示燈閃爍。接著打開手機藍牙，確保藍牙已開啟。然後點擊下方按鈕掃描 QR Code。</div>
-                    </div>
-                    <div style="width:100%;background:#FBF3EC;border-radius:6px;padding:.5rem .625rem;">
-                      <div style="font-size:.4rem;color:#6B6660;line-height:1.6;">步驟 2：將手機鏡頭對準裝置底部的 QR Code，保持距離 15–20 公分。</div>
-                    </div>
-                    <div class="ph-btn ph-btn--ghost" style="margin-top:auto;">掃描 QR Code</div>
-                    <div class="ph-btn ph-btn--ghost">下一步</div>
-                  </div>
-                </div>
-                <div class="phone-home-bar"><div class="phone-home-dot"></div></div>
-              </div>
-              <p class="phone-label">文字過多</p>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <p class="compare-version" style="color:var(--blue);">優化後 — 圖示引導</p>
-          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-            <!-- 新版手機 1 -->
-            <div class="phone">
-              <div class="phone-frame">
-                <div class="phone-notch"><div class="phone-notch-pill"></div></div>
-                <div class="phone-screen">
-                  <div class="ph-status"><div class="ph-status-t"></div><div class="ph-status-i"></div></div>
-                  <div class="ph-progress"><div class="ph-progress-fill ph-progress-fill--b" style="width:25%"></div></div>
-                  <div class="ph-content">
-                    <div class="ph-icon-wrap ph-icon-wrap--b"><div style="width:28px;height:28px;border-radius:6px;border:2px solid var(--blue);opacity:.7;"></div></div>
-                    <p class="ph-step-title">將照護站插電</p>
-                    <p class="ph-step-body">等待藍色指示燈開始閃爍</p>
-                    <div class="ph-illus"><div class="ph-illus-inner"></div></div>
-                    <div class="ph-btn ph-btn--b" style="margin-top:auto;">指示燈已閃爍 →</div>
-                  </div>
-                </div>
-                <div class="phone-home-bar"><div class="phone-home-dot"></div></div>
-              </div>
-              <p class="phone-label">一步一動作</p>
-            </div>
-            <!-- 新版手機 2 -->
-            <div class="phone">
-              <div class="phone-frame">
-                <div class="phone-notch"><div class="phone-notch-pill"></div></div>
-                <div class="phone-screen">
-                  <div class="ph-status"><div class="ph-status-t"></div><div class="ph-status-i"></div></div>
-                  <div class="ph-progress"><div class="ph-progress-fill ph-progress-fill--b" style="width:50%"></div></div>
-                  <div class="ph-content">
-                    <div class="ph-icon-wrap ph-icon-wrap--b" style="width:52px;height:52px;"><div style="width:32px;height:20px;border:2px solid var(--blue);border-radius:3px;opacity:.7;position:relative;"><div style="position:absolute;inset:3px;background:var(--blue);opacity:.3;border-radius:1px;"></div></div></div>
-                    <p class="ph-step-title">掃描裝置底部 QR Code</p>
-                    <p class="ph-step-body">鏡頭對準底部標籤</p>
-                    <div class="ph-illus" style="width:90px;height:62px;"><div style="width:36px;height:36px;border:2px dashed var(--blue);border-radius:4px;opacity:.5;display:flex;align-items:center;justify-content:center;"><div style="width:16px;height:16px;background:var(--blue);opacity:.4;border-radius:2px;"></div></div></div>
-                    <div class="ph-btn ph-btn--b" style="margin-top:auto;">開啟相機掃描</div>
-                  </div>
-                </div>
-                <div class="phone-home-bar"><div class="phone-home-dot"></div></div>
-              </div>
-              <p class="phone-label">圖示取代文字</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 04 Design System -->
-  <div class="cs cs--grey">
-    <div class="cs-inner">
-      <p class="section-label">04 · Design System</p>
-      <h3 class="cs-title">從零建立 Design System</h3>
-      <p class="cs-body" style="margin-bottom:2rem;">這是我第一次完整建立一套 Design System。目標是讓後續功能擴充時，設計和開發都能夠直接套用，不需要每次重新決定顏色、字型或元件的樣式。</p>
-      <div class="ds-grid">
-        <div class="ds-card">
-          <p class="ds-card-title">色彩系統</p>
-          <div class="ds-color-row">
-            <div class="ds-swatch" style="background:#3B5BA8;"></div>
-            <div class="ds-swatch" style="background:#5B77BE;"></div>
-            <div class="ds-swatch" style="background:#EEF1FB;"></div>
-          </div>
-          <div class="ds-color-row">
-            <div class="ds-swatch" style="background:#1C1B1E;"></div>
-            <div class="ds-swatch" style="background:#6B6660;"></div>
-            <div class="ds-swatch" style="background:#F7F6F4;"></div>
-          </div>
-          <div class="ds-color-row" style="margin-top:.375rem;">
-            <div class="ds-swatch" style="background:#3A845A;width:16px;height:16px;border-radius:3px;"></div>
-            <div class="ds-swatch" style="background:#B86E3B;width:16px;height:16px;border-radius:3px;"></div>
-            <div class="ds-swatch" style="background:#CC4444;width:16px;height:16px;border-radius:3px;"></div>
-          </div>
-        </div>
-        <div class="ds-card">
-          <p class="ds-card-title">字型層級</p>
-          <div class="ds-type-row">
-            <div class="ds-type-sample"><span class="ds-type-lbl">H1</span><span style="font-size:1.125rem;font-weight:700;line-height:1;">標題</span></div>
-            <div class="ds-type-sample"><span class="ds-type-lbl">H2</span><span style="font-size:.875rem;font-weight:600;">次標題</span></div>
-            <div class="ds-type-sample"><span class="ds-type-lbl">Body</span><span style="font-size:.75rem;color:var(--muted);">內文說明</span></div>
-            <div class="ds-type-sample"><span class="ds-type-lbl">Caption</span><span style="font-size:.625rem;color:var(--faint);">輔助文字</span></div>
-          </div>
-        </div>
-        <div class="ds-card">
-          <p class="ds-card-title">元件規範</p>
-          <div class="ds-comp-row">
-            <div class="ds-comp ds-comp--pri">主要按鈕</div>
-            <div class="ds-comp ds-comp--sec">次要</div>
-          </div>
-          <div class="ds-comp-row" style="margin-top:.375rem;">
-            <div class="ds-comp ds-comp--ghost">取消</div>
-            <div class="ds-comp ds-comp--tag">標籤</div>
-            <div class="ds-comp ds-comp--tag" style="background:var(--green-bg);color:var(--green);">完成</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 05 設計亮點 -->
-  <div class="cs cs--white">
-    <div class="cs-inner">
-      <p class="section-label">05 · 設計亮點</p>
-      <h3 class="cs-title">兩個這個專案讓我學到的事</h3>
-      <div class="highlight-grid">
-        <div class="hl-card">
-          <span class="hl-num">亮點 01</span>
-          <p class="hl-title">使用者不會讀文字</p>
-          <p class="hl-body">這個專案讓我真正理解「使用者掃描，不閱讀」。舊版流程失敗的根本原因不是步驟太多，而是每個步驟都在要求使用者先讀完一段話再行動。改成圖示引導之後，整個流程變得直覺很多。</p>
-        </div>
-        <div class="hl-card">
-          <span class="hl-num">亮點 02</span>
-          <p class="hl-title">Design System 的價值在一致性</p>
-          <p class="hl-body">建立 Design System 的過程讓我理解「規則」的意義不是限制，而是讓整個產品的每個角落都說同一種語言。後來設計英文版和新功能時，有了這套基礎，速度和一致性都提升很多。</p>
-        </div>
-        <div class="hl-card">
-          <span class="hl-num">補充</span>
-          <p class="hl-title">也做過的事</p>
-          <p class="hl-body">除了上面兩個核心項目，這段期間也完成了寶寶日記功能定義、App 使用說明書建置、英文版本介面設計、以及品牌社群貼文設計，是第一份正職 UIUX 工作的完整歷練。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</section><!-- /app -->
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
