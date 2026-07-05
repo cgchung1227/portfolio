@@ -881,9 +881,10 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
         <div class="ia-node ia-node--green">
           <p class="ia-node-head">結果分析</p>
           <ul class="ia-node-items">
-            <li class="g">各問卷結果</li>
+            <li class="g">群組管理 &amp; 權重設定</li>
+            <li class="g">三維度分析</li>
             <li class="g">重大性矩陣</li>
-            <li class="g">報表匯出</li>
+            <li class="g">定版確認 &amp; 匯出</li>
           </ul>
           <span class="ia-role-badge ia-role-badge--g">顧問 + 公司窗口</span>
         </div>
@@ -912,13 +913,13 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
       </div>
 
       <div class="process-sub">
-        <h3 class="process-title">B. 標準化底層資料 × 彈性的公司客製</h3>
-        <p class="process-body">不同產業的 ESG 議題不完全相同。設計了兩層結構：顧問在後台建置所有可能的 ESG 議題、利害關係人清單；公司窗口建置年度問卷時，從清單中勾選適合自己公司的項目。既保持了跨公司評估的可比性，又讓每家公司能客製問卷內容，不需要顧問每次都從頭設計。</p>
+        <h3 class="process-title">B. 標準化底層資料 × 彈性的客製分析</h3>
+        <p class="process-body">不同產業的 ESG 議題不完全相同。設計了兩層結構：顧問在後台建置所有可能的 ESG 議題、利害關係人清單；公司窗口建置年度問卷時，從清單中勾選適合自己公司的項目。既保持了跨公司評估的可比性，又讓每家公司能客製問卷內容，不需要顧問每次都從頭設計。<br><br>在分析端也做了同樣的彈性設計：顧問可以把填寫者依性質分成不同群組（例如「內部員工」、「客戶」、「政府」），並為每個群組設定權重，之後的分析結果可以按群組切換，看不同利害關係人眼中的重要議題是否有差異。群組設定完全自由，跨公司、跨年度都能重複使用。</p>
       </div>
 
       <div class="process-sub">
-        <h3 class="process-title">C. 重大性矩陣的視覺化設計</h3>
-        <p class="process-body">矩陣圖是整個評估的最終輸出——一張散點圖，X 軸是「這件事對公司有多大影響」，Y 軸是「外部各方有多在意這件事」，右上角的議題就是最需要優先處理的。使用者要能看懂這張圖、能點進去查看每個議題的細節，最後能匯出成 PDF 放進年度報告。我設計了互動式的矩陣圖，右上角的高優先議題用顏色和大小區分，確保一眼就能抓到重點。</p>
+        <h3 class="process-title">C. 結果呈現：矩陣 × 三維度分析</h3>
+        <p class="process-body">結果呈現是整個系統設計量最重的地方。最終輸出不只是一張矩陣圖，而是三種互補的分析視角：<br><br>① <strong>依群組比較</strong>——同一道題，不同利害關係人群組的排序可能差很多，顧問需要這個視角來理解哪些議題在特定群體中特別重要。<br>② <strong>議題整體排序</strong>——所有群組加權後的綜合排名，這是最後對外揭露的主要依據。<br>③ <strong>三面向出現次數**——**治理、環境、社會三個面向中，各有哪些議題被不同群組認為重要，幫助顧問判斷評估結果是否有面向上的偏差。<br><br>確認結果後，每份問卷要分別做「定版」確認才能計算矩陣，避免誤觸造成資料被鎖定。最後產出的矩陣圖可一鍵匯出成 PDF 放進年報。</p>
       </div>
     </div>
   </div>
@@ -1006,8 +1007,8 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
         </div>
         <div class="hl-card">
           <span class="hl-num">亮點 02</span>
-          <p class="hl-title">顧問的底層資料策略</p>
-          <p class="hl-body">顧問為不同產業預建 ESG 議題清單範本，公司窗口建置問卷時只需勾選，省去每次從頭設計的時間，同時確保跨公司結果的可比性。</p>
+          <p class="hl-title">群組管理 × 多維度分析</p>
+          <p class="hl-body">顧問可自由建立利害關係人群組並設定權重，分析結果能按群組切換視角。同一份資料可以從「群組比較」、「議題整體排序」、「三面向出現次數」三個角度解讀，讓評估結果從數字變成洞察。</p>
         </div>
         <div class="hl-card">
           <span class="hl-num">亮點 03</span>
