@@ -370,8 +370,8 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
         <p class="section-label">關於我</p>
         <h2 class="about-title">從人資到 PM，<br>做過設計、走到 B2B SaaS</h2>
         <p class="about-body">我的第一份工作是人資。每天最重要的事是搞清楚對方「說的是什麼」和「真正需要的是什麼」——這兩件事往往不一樣，PM 工作也是。</p>
-        <p class="about-body">後來做了一段時間的產品設計，再進入現在這家公司負責 B2B SaaS 的產品工作。設計的訓練讓我在定義需求時能快速掌握使用者流程；PM 的角色讓我學會在使用者需求、業務目標、技術可行性之間做出取捨。</p>
-        <p class="about-body">這兩年做的兩個 ESG 系統都極度複雜：domain 知識深、使用者角色多、法規邏輯嚴。我逐漸習慣的節奏是先把問題框架定清楚，再決定做什麼、不做什麼，推動執行。</p>
+        <p class="about-body">做設計做到一個階段，開始感覺到一個限制：設計完交付出去，就沒有下文了。使用者真的解決問題了嗎？功能上線後是否被正確理解？這些問題我跟不到。我想要更完整地參與一個產品——從定義問題、決定做什麼不做什麼，到看到落地之後的樣子，而不只是負責其中一個環節。</p>
+        <p class="about-body">帶著這個想法進入現在這家公司，開始負責 B2B SaaS 的產品工作。設計的背景讓我在定義需求時能快速掌握使用者流程；PM 的角色讓我開始真正理解在使用者需求、業務目標、技術可行性之間做取捨是什麼意思。這兩年做的兩個 ESG 系統都極度複雜，但我逐漸習慣的節奏是先把問題框架定清楚，再決定做什麼、不做什麼，推動執行。</p>
         <div class="cert-badge"><div class="cert-icon"></div>Google UX Design Certificate</div>
       </div>
       <div>
@@ -507,38 +507,23 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
   <div class="cs cs--grey">
     <div class="cs-inner">
       <p class="section-label">04 · 系統架構</p>
-      <h3 class="cs-title">產品碳足跡模組的資訊架構</h3>
-      <p class="cs-body">從生產資訊輸入，到五階段資料填寫與數據品質評估，最後輸出可供對外揭露的碳足跡報告。</p>
+      <h3 class="cs-title">產品範疇與三大模組</h3>
+      <p class="cs-body">在正式開始定義功能之前，我先釐清了這個產品需要解決哪三個層次的問題，再決定哪些在這個版本內、哪些放到之後。</p>
       <div class="ia-flow">
         <div class="ia-row ia-row--2">
           <div class="ia-node ia-node--amber">
-            <p class="ia-node-head">生產資訊</p>
-            <ul class="ia-node-items">
-              <li>產品型號新增 / 編輯 / 檢視</li>
-              <li>產品工序用料設定</li>
-              <li>用料複製功能</li>
-              <li>工序項目 CRUD</li>
-            </ul>
+            <p class="ia-node-head">生產資訊管理</p>
+            <p class="ia-node-items" style="list-style:none;padding:0;">讓企業建立產品型號與工序用料的基礎資料。這是計算的前提，但不是使用者最常操作的地方，設計重點是「設定一次、反覆複用」。</p>
           </div>
           <div class="ia-node ia-node--amber">
-            <p class="ia-node-head">產品碳足跡 — 結果呈現</p>
-            <ul class="ia-node-items">
-              <li>產品碳足跡清冊</li>
-              <li>產品碳足跡報告書</li>
-              <li>產品碳足跡總覽</li>
-              <li>產品碳足跡分析</li>
-            </ul>
+            <p class="ia-node-head">結果呈現與報告</p>
+            <p class="ia-node-items" style="list-style:none;padding:0;">給管理層看的輸出面。我決定這個版本先做清冊與報告書，讓揭露需求先滿足，進階分析功能放後續迭代。</p>
           </div>
         </div>
-        <div class="ia-arrow">↓ 核心流程</div>
+        <div class="ia-arrow">↓ 核心模組</div>
         <div class="ia-node ia-node--amber" style="background:var(--amber-bg);">
-          <p class="ia-node-head">產品碳足跡 — 資料剖析（核心）</p>
-          <ul class="ia-node-items" style="column-count:2;column-gap:2rem;">
-            <li>產品盤查總覽（狀態管理）</li>
-            <li>五階段資料填寫（搖籃到墳墓）</li>
-            <li>三階段資料填寫（搖籃到大門）</li>
-            <li>數據品質設定（DQR 評分）</li>
-          </ul>
+          <p class="ia-node-head">產品碳足跡盤查（核心）</p>
+          <p class="ia-node-items" style="list-style:none;padding:0;">整個產品最複雜的部分。包含狀態管理、五階段資料填寫流程、數據品質評估，以及計算後的凍結確認機制。這個模組的需求定義花了最多時間，也是迭代最頻繁的地方。</p>
         </div>
       </div>
       <div style="margin-top:1.75rem;">
@@ -681,11 +666,11 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
           </div>
         </div>
       <div class="process-sub">
-        <h3 class="process-title">D. 系統截圖（已去識別化）</h3>
-        <p class="process-body">以下為實際系統截圖，敏感資訊已遮蔽。</p>
+        <h3 class="process-title">D. 系統落地（已去識別化）</h3>
+        <p class="process-body">以下為實際上線畫面。每個截圖對應一個關鍵的產品決策。</p>
         <div class="shots-3col" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;margin-top:1.25rem;">
           <div>
-            <p style="font-size:.75rem;color:var(--muted);margin-bottom:.5rem;">溫室氣體排放總覽</p>
+            <p style="font-size:.75rem;color:var(--muted);margin-bottom:.5rem;">溫室氣體排放總覽 — 決策：管理層需要的是趨勢與佔比，而不是原始數字，儀表板以視覺化為主</p>
             <div class="browser">
               <div class="bbar bbar-dk">
                 <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
@@ -697,7 +682,7 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
             </div>
           </div>
           <div>
-            <p style="font-size:.75rem;color:var(--muted);margin-bottom:.5rem;">組織盤查範疇三</p>
+            <p style="font-size:.75rem;color:var(--muted);margin-bottom:.5rem;">組織盤查範疇三 — 決策：範疇三排放源種類最多，用分類折疊設計降低認知負擔</p>
             <div class="browser">
               <div class="bbar bbar-dk">
                 <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
@@ -709,7 +694,7 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
             </div>
           </div>
           <div>
-            <p style="font-size:.75rem;color:var(--muted);margin-bottom:.5rem;">排放源鑑別設定</p>
+            <p style="font-size:.75rem;color:var(--muted);margin-bottom:.5rem;">排放源鑑別設定 — 決策：這一步是盤查的起點，設計成引導式設定流程，確保使用者不會漏掉必填項</p>
             <div class="browser">
               <div class="bbar bbar-dk">
                 <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
