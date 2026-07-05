@@ -61,16 +61,16 @@ a{color:inherit;text-decoration:none;}
 
 /* ABOUT */
 .about{padding:6rem 3rem;background:var(--bg2);}
-.about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.about-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:3rem;}
 .section-label{font-size:.75rem;color:var(--faint);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.25rem;}
 .about-title{font-weight:700;font-size:1.75rem;line-height:1.25;margin-bottom:1.25rem;}
-.about-body{font-size:.9375rem;color:var(--muted);line-height:1.85;margin-bottom:1rem;}
+.about-body{font-size:.9375rem;color:var(--muted);line-height:1.85;margin-bottom:1rem;max-width:680px;}
 .about-body + .about-body{margin-top:.5rem;}
 .cert-badge{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.5rem;padding:.5rem .875rem;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.8125rem;color:var(--muted);}
 .cert-icon{width:18px;height:18px;border-radius:3px;background:#4285F4;flex-shrink:0;}
 
 /* STRENGTHS */
-.strengths{display:flex;flex-direction:column;gap:.875rem;}
+.strengths{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
 .str-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.375rem;}
 .str-num{font-size:.7rem;color:var(--faint);margin-bottom:.375rem;}
 .str-title{font-weight:700;font-size:.9375rem;margin-bottom:.35rem;}
@@ -320,7 +320,7 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
 @media(max-width:900px){
   .nav{padding:1rem 1.5rem;}
   .hero,.about,.cs,.proj-hero,.contact{padding-left:1.5rem;padding-right:1.5rem;}
-  .hero-projects,.overview-grid,.about-inner,.pain-grid,.user-grid,.ia-row--2,.ia-row--4,.compare-grid,.status-grid,.highlight-grid,.screen-wrap{grid-template-columns:1fr;}
+  .hero-projects,.overview-grid,.pain-grid,.user-grid,.ia-row--2,.ia-row--4,.compare-grid,.status-grid,.highlight-grid,.screen-wrap,.strengths{grid-template-columns:1fr;}
   .shots-3col{grid-template-columns:1fr !important;}
   .contact-inner{text-align:left;}
   footer{padding:1.25rem 1.5rem;flex-direction:column;gap:.3rem;align-items:flex-start;}
