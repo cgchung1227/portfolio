@@ -233,16 +233,16 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
 .mc-badge--grey{background:rgba(255,255,255,.1);}
 .mc-link{width:20px;height:11px;background:rgba(184,110,59,.3);border-radius:2px;flex-shrink:0;}
 
-/* Light: Step 五階段 */
-.mc-step-ui{position:absolute;inset:0;background:#F5F7FA;display:flex;flex-direction:column;}
-.mc-steps-bar{display:flex;align-items:flex-start;padding:.5rem .4rem;background:#fff;border-bottom:1px solid #E5E7EB;flex-shrink:0;}
-.mc-step-item{display:flex;flex-direction:column;align-items:center;gap:.12rem;flex:1;}
-.mc-step-circ{width:16px;height:16px;border-radius:50%;border:1.5px solid #D1D5DB;background:#fff;}
-.mc-step-item.on .mc-step-circ{background:#3A845A;border-color:#3A845A;}
-.mc-step-label{font-size:.27rem;color:#9CA3AF;text-align:center;white-space:nowrap;}
-.mc-step-item.on .mc-step-label{color:#3A845A;font-weight:600;}
-.mc-step-connector{height:1.5px;background:#E5E7EB;flex:1;margin-top:7px;flex-shrink:0;}
-.mc-step-content{flex:1;padding:.4rem .5rem;display:flex;flex-direction:column;gap:.3rem;overflow:hidden;}
+/* Light: 生命週期 icon 欄 */
+.mc-tbl-ui{position:absolute;inset:0;background:#F5F7FA;display:flex;flex-direction:column;padding:.3rem;}
+.mc-tbl-hd{display:flex;align-items:center;padding:.25rem .4rem;gap:.375rem;flex-shrink:0;}
+.mc-tbl-hc{font-size:.26rem;color:#9CA3AF;flex:1;}
+.mc-tbl-row{display:flex;align-items:center;padding:.3rem .4rem;gap:.375rem;border-bottom:1px solid rgba(0,0,0,.04);background:#fff;border-radius:4px;margin-bottom:.2rem;}
+.mc-tbl-cell{flex:1;height:7px;border-radius:2px;background:rgba(0,0,0,.07);}
+.mc-lc-icons{display:flex;gap:.25rem;align-items:center;flex:1.8;}
+.mc-lc-icon{width:10px;height:10px;border-radius:50%;border:1px solid #D1D5DB;background:#fff;flex-shrink:0;}
+.mc-lc-icon.done{background:#3A845A;border-color:#3A845A;}
+.mc-lc-icon.partial{background:var(--amber-bg);border-color:var(--amber);}
 /* Dark: Tab (DQR 評分) */
 .mc-tabs-bar{display:flex;border-bottom:1px solid rgba(255,255,255,.07);flex-shrink:0;}
 .mc-tab{flex:1;height:26px;display:flex;align-items:center;justify-content:center;font-size:.36rem;color:rgba(255,255,255,.3);border-bottom:2px solid transparent;}
@@ -557,47 +557,56 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
       <p class="cs-body" style="margin-bottom:2.5rem;">開始做這個產品之前，我得先搞清楚「產品碳足跡計算」是什麼。第一次和使用者訪談，對方提到碳係數、排放源分類、生命週期邊界，我一個都聽不懂。花了幾週補完背景知識，才在下一次訪談時真正聽懂使用者卡在哪裡——哪些流程複雜是法規必要的，哪些只是系統長期累積的歷史包袱。這個過程讓我改了好幾次訪談問題，也推翻了幾個最初的需求假設，重新定義了產品範疇。</p>
 
       <div class="process-sub">
-        <h3 class="process-title">A. 核心流程設計：步驟條導航的設計考量</h3>
-        <p class="process-body">計算規範要求分別追蹤五個階段：原料取得、生產製造、運輸配銷、產品使用、廢棄處置——可以理解成一件產品「從出生到報廢」每個環節的碳排放。每個階段欄位不同，如果同時展開頁面會極度複雜。最終採用圓形 icon 步驟條取代一般分頁，每個生命週期階段對應一個帶圖示的圓形步驟，點擊切換對應的填報頁面。步驟條同時顯示各階段的完成狀態——一個元件解決了導航和進度兩個問題。</p>
+        <h3 class="process-title">A. 核心流程設計：五個入口的定點導覽</h3>
+        <p class="process-body">計算規範要求分別追蹤五個階段：原料取得、生產製造、運輸配銷、產品使用、廢棄處置。每個階段欄位不同，對應的填寫量差距也大。不強迫使用者走線性流程——在產品盤查總覽頁的「生命週期」欄位直接放置五個可點擊的 icon，點哪個 icon 直接進哪個階段的維護頁面。這個設計讓使用者回頭補填或修改某一階段時，不需要重新走完整個流程；同時一眼就能在總覽頁看出哪些階段還沒填，哪些已完成。</p>
         <div class="browser">
           <div class="bbar bbar-lt">
             <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
-            <div class="burl burl-lt">carbon-footprint.app / 產品碳足跡 / 產品盤查 / 填報</div>
+            <div class="burl burl-lt">carbon-footprint.app / 產品碳足跡 / 產品盤查</div>
           </div>
           <div class="bscreen">
-            <div class="mc-step-ui">
-              <div class="mc-steps-bar">
-                <div class="mc-step-item on">
-                  <div class="mc-step-circ"></div>
-                  <div class="mc-step-label">原料取得</div>
-                </div>
-                <div class="mc-step-connector"></div>
-                <div class="mc-step-item">
-                  <div class="mc-step-circ"></div>
-                  <div class="mc-step-label">生產製造</div>
-                </div>
-                <div class="mc-step-connector"></div>
-                <div class="mc-step-item">
-                  <div class="mc-step-circ"></div>
-                  <div class="mc-step-label">運輸配銷</div>
-                </div>
-                <div class="mc-step-connector"></div>
-                <div class="mc-step-item">
-                  <div class="mc-step-circ"></div>
-                  <div class="mc-step-label">產品使用</div>
-                </div>
-                <div class="mc-step-connector"></div>
-                <div class="mc-step-item">
-                  <div class="mc-step-circ"></div>
-                  <div class="mc-step-label">廢棄處置</div>
-                </div>
+            <div class="mc-tbl-ui">
+              <div class="mc-tbl-hd">
+                <div class="mc-tbl-hc" style="flex:.6;">狀態</div>
+                <div class="mc-tbl-hc">產品名稱</div>
+                <div class="mc-tbl-hc mc-tbl-hc--lc" style="flex:1.8;">生命週期</div>
+                <div class="mc-tbl-hc" style="flex:.5;">功能</div>
               </div>
-              <div class="mc-step-content">
-                <div class="mc-form-row" style="border-color:rgba(0,0,0,.05);"><div class="mc-lbl" style="background:rgba(0,0,0,.08);"></div><div class="mc-inp" style="background:#F9FAFB;border-color:#D1D5DB;"></div></div>
-                <div class="mc-form-row" style="border-color:rgba(0,0,0,.05);"><div class="mc-lbl" style="background:rgba(0,0,0,.08);"></div><div class="mc-inp" style="background:#F9FAFB;border-color:#D1D5DB;"></div></div>
-                <div class="mc-form-row" style="border-color:rgba(0,0,0,.05);"><div class="mc-lbl" style="background:rgba(0,0,0,.08);"></div><div class="mc-inp" style="background:#F9FAFB;border-color:#D1D5DB;"></div></div>
-                <div class="mc-form-row" style="border-color:rgba(0,0,0,.05);"><div class="mc-lbl" style="background:rgba(0,0,0,.08);"></div><div class="mc-inp" style="background:#F9FAFB;border-color:#D1D5DB;"></div></div>
-                <div class="mc-btns"><div class="mc-fbt mc-fbt--g" style="border-color:#D1D5DB;"></div><div class="mc-fbt mc-fbt--s"></div></div>
+              <div class="mc-tbl-row">
+                <div style="flex:.6;height:9px;border-radius:3px;background:rgba(184,110,59,.35);"></div>
+                <div class="mc-tbl-cell"></div>
+                <div class="mc-lc-icons">
+                  <div class="mc-lc-icon done"></div>
+                  <div class="mc-lc-icon done"></div>
+                  <div class="mc-lc-icon partial"></div>
+                  <div class="mc-lc-icon"></div>
+                  <div class="mc-lc-icon"></div>
+                </div>
+                <div class="mc-tbl-cell" style="flex:.5;"></div>
+              </div>
+              <div class="mc-tbl-row">
+                <div style="flex:.6;height:9px;border-radius:3px;background:rgba(58,132,90,.3);"></div>
+                <div class="mc-tbl-cell"></div>
+                <div class="mc-lc-icons">
+                  <div class="mc-lc-icon done"></div>
+                  <div class="mc-lc-icon done"></div>
+                  <div class="mc-lc-icon done"></div>
+                  <div class="mc-lc-icon done"></div>
+                  <div class="mc-lc-icon done"></div>
+                </div>
+                <div class="mc-tbl-cell" style="flex:.5;"></div>
+              </div>
+              <div class="mc-tbl-row">
+                <div style="flex:.6;height:9px;border-radius:3px;background:rgba(0,0,0,.08);"></div>
+                <div class="mc-tbl-cell"></div>
+                <div class="mc-lc-icons">
+                  <div class="mc-lc-icon done"></div>
+                  <div class="mc-lc-icon"></div>
+                  <div class="mc-lc-icon"></div>
+                  <div class="mc-lc-icon"></div>
+                  <div class="mc-lc-icon"></div>
+                </div>
+                <div class="mc-tbl-cell" style="flex:.5;"></div>
               </div>
             </div>
           </div>
