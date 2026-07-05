@@ -243,33 +243,26 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
 .mc-lc-icon{width:10px;height:10px;border-radius:50%;border:1px solid #D1D5DB;background:#fff;flex-shrink:0;}
 .mc-lc-icon.done{background:#3A845A;border-color:#3A845A;}
 .mc-lc-icon.partial{background:var(--amber-bg);border-color:var(--amber);}
-/* Dark: Tab (DQR 評分) */
-.mc-tabs-bar{display:flex;border-bottom:1px solid rgba(255,255,255,.07);flex-shrink:0;}
-.mc-tab{flex:1;height:26px;display:flex;align-items:center;justify-content:center;font-size:.36rem;color:rgba(255,255,255,.3);border-bottom:2px solid transparent;}
+/* Light: Tab (DQR 評分) */
+.mc-tabs-bar{display:flex;border-bottom:1px solid #E5E7EB;flex-shrink:0;background:#fff;}
+.mc-tab{flex:1;height:26px;display:flex;align-items:center;justify-content:center;font-size:.36rem;color:#9CA3AF;border-bottom:2px solid transparent;}
 .mc-tab.on{color:#B86E3B;border-bottom-color:#B86E3B;background:rgba(184,110,59,.06);}
 .mc-tab-body{flex:1;padding:.5rem .625rem;display:flex;flex-direction:column;gap:.35rem;overflow:hidden;}
-.mc-form-row{display:flex;align-items:center;gap:.5rem;padding:.2rem 0;border-bottom:1px solid rgba(255,255,255,.03);}
-.mc-lbl{width:45px;height:4px;background:rgba(255,255,255,.12);border-radius:2px;flex-shrink:0;}
-.mc-inp{flex:1;height:14px;background:#152030;border:1px solid rgba(255,255,255,.1);border-radius:3px;}
-.mc-btns{display:flex;justify-content:flex-end;gap:.375rem;padding-top:.25rem;}
-.mc-fbt{height:15px;border-radius:3px;}
-.mc-fbt--g{background:transparent;border:1px solid rgba(255,255,255,.15);width:32px;}
-.mc-fbt--s{background:#B86E3B;width:38px;}
 
-/* Dark: DQR */
-.mc-dqr{position:absolute;inset:0;background:#0F1B2D;display:flex;flex-direction:column;}
-.mc-dqr-hd{height:26px;background:#132030;display:flex;align-items:center;padding:0 .625rem;border-bottom:1px solid rgba(255,255,255,.05);flex-shrink:0;}
-.mc-dqr-bc{font-size:.36rem;color:rgba(255,255,255,.35);}
+/* Light: DQR */
+.mc-dqr{position:absolute;inset:0;background:#F5F7FA;display:flex;flex-direction:column;}
+.mc-dqr-hd{height:26px;background:#fff;display:flex;align-items:center;padding:0 .625rem;border-bottom:1px solid #E5E7EB;flex-shrink:0;}
+.mc-dqr-bc{font-size:.36rem;color:#9CA3AF;}
 .mc-dqr-bd{flex:1;padding:.5rem;display:flex;flex-direction:column;gap:.375rem;overflow:hidden;}
-.mc-dqr-grid{display:grid;grid-template-columns:90px repeat(5,1fr);gap:.25rem;background:rgba(255,255,255,.02);border-radius:4px;border:1px solid rgba(255,255,255,.05);overflow:hidden;}
-.mc-dqr-hc{height:16px;display:flex;align-items:center;justify-content:center;font-size:.32rem;color:rgba(255,255,255,.35);border-bottom:1px solid rgba(255,255,255,.05);}
+.mc-dqr-grid{display:grid;grid-template-columns:90px repeat(5,1fr);gap:0;background:#fff;border-radius:4px;border:1px solid #E5E7EB;overflow:hidden;}
+.mc-dqr-hc{height:16px;display:flex;align-items:center;justify-content:center;font-size:.32rem;color:#9CA3AF;border-bottom:1px solid #E5E7EB;}
 .mc-dqr-hc.on{color:#B86E3B;}
-.mc-dqr-rl{height:16px;display:flex;align-items:center;padding:0 .375rem;font-size:.32rem;color:rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.04);}
-.mc-dqr-cell{height:16px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(255,255,255,.04);}
+.mc-dqr-rl{height:16px;display:flex;align-items:center;padding:0 .375rem;font-size:.32rem;color:#6B6660;border-bottom:1px solid #F3F4F6;background:#FAFAFA;}
+.mc-dqr-cell{height:16px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #F3F4F6;}
 .mc-dqr-dot{width:12px;height:8px;border-radius:2px;}
-.mc-dqr-dot--hi{background:rgba(58,132,90,.7);}
-.mc-dqr-dot--md{background:rgba(184,110,59,.6);}
-.mc-dqr-dot--lo{background:rgba(255,255,255,.12);}
+.mc-dqr-dot--hi{background:rgba(58,132,90,.55);}
+.mc-dqr-dot--md{background:rgba(184,110,59,.45);}
+.mc-dqr-dot--lo{background:#E5E7EB;}
 
 /* Light: 顧問管理 */
 .ml-con{position:absolute;inset:0;background:#fff;display:flex;flex-direction:column;}
@@ -633,31 +626,31 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
           <div>
             <p class="compare-version">v1 — 獨立頁面（問題版本）</p>
             <div class="browser">
-              <div class="bbar bbar-dk">
+              <div class="bbar bbar-lt">
                 <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
-                <div class="burl burl-dk">…/ 數據品質設定（舊）</div>
+                <div class="burl burl-lt">…/ 數據品質設定（舊）</div>
               </div>
               <div class="bscreen">
                 <div class="mc-dqr">
                   <div class="mc-dqr-hd"><span class="mc-dqr-bc">產品碳足跡 / 數據品質設定</span></div>
                   <div class="mc-dqr-bd">
                     <div class="mc-dqr-grid">
-                      <div class="mc-dqr-hc" style="border-right:1px solid rgba(255,255,255,.05);">評分項目</div>
+                      <div class="mc-dqr-hc" style="border-right:1px solid #E5E7EB;">評分項目</div>
                       <div class="mc-dqr-hc">原料</div><div class="mc-dqr-hc">生產</div><div class="mc-dqr-hc">運輸</div><div class="mc-dqr-hc">使用</div><div class="mc-dqr-hc">廢棄</div>
-                      <div class="mc-dqr-rl" style="border-right:1px solid rgba(255,255,255,.05);">活動數據</div>
+                      <div class="mc-dqr-rl" style="border-right:1px solid #E5E7EB;">活動數據</div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--lo"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--lo"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--lo"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--lo"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--lo"></div></div>
-                      <div class="mc-dqr-rl" style="border-right:1px solid rgba(255,255,255,.05);">完整性</div>
+                      <div class="mc-dqr-rl" style="border-right:1px solid #E5E7EB;">完整性</div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--lo"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--lo"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--lo"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--lo"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--lo"></div></div>
                     </div>
-                    <p style="font-size:.34rem;color:rgba(255,255,255,.2);text-align:center;padding-top:.5rem;">無法對照已填數據，評分困難</p>
+                    <p style="font-size:.34rem;color:#9CA3AF;text-align:center;padding-top:.5rem;">無法對照已填數據，評分困難</p>
                   </div>
                 </div>
               </div>
@@ -666,31 +659,24 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
           <div>
             <p class="compare-version">v2 — 整合設計（改善後）</p>
             <div class="browser">
-              <div class="bbar bbar-dk">
+              <div class="bbar bbar-lt">
                 <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
-                <div class="burl burl-dk">…/ 產品盤查 / 數據品質設定</div>
+                <div class="burl burl-lt">…/ 產品盤查 / 數據品質設定</div>
               </div>
               <div class="bscreen">
                 <div class="mc-dqr">
-                  <div class="mc-dqr-hd"><span class="mc-dqr-bc">產品碳足跡 / 產品盤查 / <span style="color:rgba(184,110,59,.8)">數據品質設定</span></span></div>
+                  <div class="mc-dqr-hd"><span class="mc-dqr-bc">產品碳足跡 / 產品盤查 / <span style="color:#B86E3B;">數據品質設定</span></span></div>
                   <div class="mc-dqr-bd">
-                    <div class="mc-tabs-bar" style="margin:0 0 .35rem;flex-shrink:0;">
-                      <div class="mc-tab on" style="font-size:.32rem;">原料取得</div>
-                      <div class="mc-tab" style="font-size:.32rem;">生產製造</div>
-                      <div class="mc-tab" style="font-size:.32rem;">運輸配銷</div>
-                      <div class="mc-tab" style="font-size:.32rem;">產品使用</div>
-                      <div class="mc-tab" style="font-size:.32rem;">廢棄處置</div>
-                    </div>
                     <div class="mc-dqr-grid">
-                      <div class="mc-dqr-hc" style="border-right:1px solid rgba(255,255,255,.05);">排放源</div>
+                      <div class="mc-dqr-hc" style="border-right:1px solid #E5E7EB;">排放源</div>
                       <div class="mc-dqr-hc on">活動數據</div><div class="mc-dqr-hc">完整性</div><div class="mc-dqr-hc">可靠度</div><div class="mc-dqr-hc">時間性</div><div class="mc-dqr-hc">地理性</div>
-                      <div class="mc-dqr-rl" style="border-right:1px solid rgba(255,255,255,.05);">原料 A</div>
+                      <div class="mc-dqr-rl" style="border-right:1px solid #E5E7EB;">原料 A</div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--hi"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--hi"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--md"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--hi"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--lo"></div></div>
-                      <div class="mc-dqr-rl" style="border-right:1px solid rgba(255,255,255,.05);">原料 B</div>
+                      <div class="mc-dqr-rl" style="border-right:1px solid #E5E7EB;">原料 B</div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--md"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--hi"></div></div>
                       <div class="mc-dqr-cell"><div class="mc-dqr-dot mc-dqr-dot--hi"></div></div>
@@ -708,12 +694,12 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
         <p class="process-body">以下為實際上線畫面。管理層需要的是趨勢與佔比，而不是原始數字——儀表板以視覺化為主，讓決策者能快速掌握整體排放狀況。</p>
         <div style="max-width:640px;margin-top:1.25rem;">
           <div class="browser">
-            <div class="bbar bbar-dk">
+            <div class="bbar bbar-lt">
               <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
-              <div class="burl burl-dk">carbon-footprint.app / 排放總覽</div>
+              <div class="burl burl-lt">carbon-footprint.app / 碳足跡分析結果</div>
             </div>
             <div class="bscreen" style="padding:0;">
-              <img src="images/carbon-dashboard.png" style="width:100%;height:100%;object-fit:cover;object-position:top;" alt="溫室氣體排放總覽">
+              <img src="碳足跡分析結果圖.png" style="width:100%;height:100%;object-fit:cover;object-position:top;" alt="碳足跡分析結果">
             </div>
           </div>
         </div>
