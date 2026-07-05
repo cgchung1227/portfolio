@@ -233,8 +233,17 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
 .mc-badge--grey{background:rgba(255,255,255,.1);}
 .mc-link{width:20px;height:11px;background:rgba(184,110,59,.3);border-radius:2px;flex-shrink:0;}
 
-/* Dark: Tab 五階段 */
-.mc-tab-ui{position:absolute;inset:0;background:#0F1B2D;display:flex;flex-direction:column;}
+/* Light: Step 五階段 */
+.mc-step-ui{position:absolute;inset:0;background:#F5F7FA;display:flex;flex-direction:column;}
+.mc-steps-bar{display:flex;align-items:flex-start;padding:.5rem .4rem;background:#fff;border-bottom:1px solid #E5E7EB;flex-shrink:0;}
+.mc-step-item{display:flex;flex-direction:column;align-items:center;gap:.12rem;flex:1;}
+.mc-step-circ{width:16px;height:16px;border-radius:50%;border:1.5px solid #D1D5DB;background:#fff;}
+.mc-step-item.on .mc-step-circ{background:#3A845A;border-color:#3A845A;}
+.mc-step-label{font-size:.27rem;color:#9CA3AF;text-align:center;white-space:nowrap;}
+.mc-step-item.on .mc-step-label{color:#3A845A;font-weight:600;}
+.mc-step-connector{height:1.5px;background:#E5E7EB;flex:1;margin-top:7px;flex-shrink:0;}
+.mc-step-content{flex:1;padding:.4rem .5rem;display:flex;flex-direction:column;gap:.3rem;overflow:hidden;}
+/* Dark: Tab (DQR 評分) */
 .mc-tabs-bar{display:flex;border-bottom:1px solid rgba(255,255,255,.07);flex-shrink:0;}
 .mc-tab{flex:1;height:26px;display:flex;align-items:center;justify-content:center;font-size:.36rem;color:rgba(255,255,255,.3);border-bottom:2px solid transparent;}
 .mc-tab.on{color:#B86E3B;border-bottom-color:#B86E3B;background:rgba(184,110,59,.06);}
@@ -430,7 +439,7 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
         <div class="fact-grid">
           <div class="fact-box"><div class="fact-num fact-num--amber">2</div><div class="fact-desc">功能版本迭代</div></div>
           <div class="fact-box"><div class="fact-num fact-num--amber">5</div><div class="fact-desc">生命週期階段</div></div>
-          <div class="fact-box"><div class="fact-num fact-num--amber">4</div><div class="fact-desc">產品盤查狀態</div></div>
+          <div class="fact-box"><div class="fact-num fact-num--amber">6</div><div class="fact-desc">產品盤查狀態</div></div>
           <div class="fact-box"><div class="fact-num fact-num--amber">v2</div><div class="fact-desc">數據品質功能迭代</div></div>
         </div>
       </div>
@@ -548,29 +557,47 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
       <p class="cs-body" style="margin-bottom:2.5rem;">開始做這個產品之前，我得先搞清楚「產品碳足跡計算」是什麼。第一次和使用者訪談，對方提到碳係數、排放源分類、生命週期邊界，我一個都聽不懂。花了幾週補完背景知識，才在下一次訪談時真正聽懂使用者卡在哪裡——哪些流程複雜是法規必要的，哪些只是系統長期累積的歷史包袱。這個過程讓我改了好幾次訪談問題，也推翻了幾個最初的需求假設，重新定義了產品範疇。</p>
 
       <div class="process-sub">
-        <h3 class="process-title">A. 核心流程設計：Tab 切換的選擇依據</h3>
-        <p class="process-body">計算規範要求分別追蹤五個階段：原料取得、生產製造、運輸配銷、產品使用、廢棄處置——可以理解成一件產品「從出生到報廢」每個環節的碳排放。每個階段欄位不同，如果同時展開頁面會極度複雜。在定義核心互動模型時，我採用 Tab 切換，讓使用者一次專注在一個階段，Tab 狀態同時作為整體完成度的進度指示——一個元件解決了兩個問題。</p>
+        <h3 class="process-title">A. 核心流程設計：步驟條導航的設計考量</h3>
+        <p class="process-body">計算規範要求分別追蹤五個階段：原料取得、生產製造、運輸配銷、產品使用、廢棄處置——可以理解成一件產品「從出生到報廢」每個環節的碳排放。每個階段欄位不同，如果同時展開頁面會極度複雜。最終採用圓形 icon 步驟條取代一般分頁，每個生命週期階段對應一個帶圖示的圓形步驟，點擊切換對應的填報頁面。步驟條同時顯示各階段的完成狀態——一個元件解決了導航和進度兩個問題。</p>
         <div class="browser">
-          <div class="bbar bbar-dk">
+          <div class="bbar bbar-lt">
             <div class="bdots"><div class="bdot"></div><div class="bdot"></div><div class="bdot"></div></div>
-            <div class="burl burl-dk">carbon-footprint.app / 產品碳足跡 / 產品盤查 / 填報</div>
+            <div class="burl burl-lt">carbon-footprint.app / 產品碳足跡 / 產品盤查 / 填報</div>
           </div>
           <div class="bscreen">
-            <div class="mc-tab-ui">
-              <div class="mc-tabs-bar">
-                <div class="mc-tab on">原料取得</div>
-                <div class="mc-tab">生產製造</div>
-                <div class="mc-tab">運輸配銷</div>
-                <div class="mc-tab">產品使用</div>
-                <div class="mc-tab">廢棄處置</div>
+            <div class="mc-step-ui">
+              <div class="mc-steps-bar">
+                <div class="mc-step-item on">
+                  <div class="mc-step-circ"></div>
+                  <div class="mc-step-label">原料取得</div>
+                </div>
+                <div class="mc-step-connector"></div>
+                <div class="mc-step-item">
+                  <div class="mc-step-circ"></div>
+                  <div class="mc-step-label">生產製造</div>
+                </div>
+                <div class="mc-step-connector"></div>
+                <div class="mc-step-item">
+                  <div class="mc-step-circ"></div>
+                  <div class="mc-step-label">運輸配銷</div>
+                </div>
+                <div class="mc-step-connector"></div>
+                <div class="mc-step-item">
+                  <div class="mc-step-circ"></div>
+                  <div class="mc-step-label">產品使用</div>
+                </div>
+                <div class="mc-step-connector"></div>
+                <div class="mc-step-item">
+                  <div class="mc-step-circ"></div>
+                  <div class="mc-step-label">廢棄處置</div>
+                </div>
               </div>
-              <div class="mc-tab-body">
-                <div class="mc-form-row"><div class="mc-lbl"></div><div class="mc-inp"></div></div>
-                <div class="mc-form-row"><div class="mc-lbl"></div><div class="mc-inp"></div></div>
-                <div class="mc-form-row"><div class="mc-lbl"></div><div class="mc-inp"></div></div>
-                <div class="mc-form-row"><div class="mc-lbl"></div><div class="mc-inp"></div></div>
-                <div class="mc-form-row"><div class="mc-lbl"></div><div class="mc-inp"></div></div>
-                <div class="mc-btns"><div class="mc-fbt mc-fbt--g"></div><div class="mc-fbt mc-fbt--s"></div></div>
+              <div class="mc-step-content">
+                <div class="mc-form-row" style="border-color:rgba(0,0,0,.05);"><div class="mc-lbl" style="background:rgba(0,0,0,.08);"></div><div class="mc-inp" style="background:#F9FAFB;border-color:#D1D5DB;"></div></div>
+                <div class="mc-form-row" style="border-color:rgba(0,0,0,.05);"><div class="mc-lbl" style="background:rgba(0,0,0,.08);"></div><div class="mc-inp" style="background:#F9FAFB;border-color:#D1D5DB;"></div></div>
+                <div class="mc-form-row" style="border-color:rgba(0,0,0,.05);"><div class="mc-lbl" style="background:rgba(0,0,0,.08);"></div><div class="mc-inp" style="background:#F9FAFB;border-color:#D1D5DB;"></div></div>
+                <div class="mc-form-row" style="border-color:rgba(0,0,0,.05);"><div class="mc-lbl" style="background:rgba(0,0,0,.08);"></div><div class="mc-inp" style="background:#F9FAFB;border-color:#D1D5DB;"></div></div>
+                <div class="mc-btns"><div class="mc-fbt mc-fbt--g" style="border-color:#D1D5DB;"></div><div class="mc-fbt mc-fbt--s"></div></div>
               </div>
             </div>
           </div>
@@ -578,13 +605,15 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
       </div>
 
       <div class="process-sub">
-        <h3 class="process-title">B. 狀態系統決策：四種盤查狀態的優先排序邏輯</h3>
-        <p class="process-body">使用者需要在總覽頁快速判斷哪些產品需要優先處理。我定義了四種狀態並設計對應的顏色優先序——灰色是設定未完成，橘色是上游資料有變動需要更新，藍色是計算完成，綠色是已凍結確認。狀態系統讓使用者不需要逐一點開才能判斷優先順序。</p>
-        <div class="status-grid">
-          <div class="status-box"><p class="status-name" style="color:var(--muted);">尚未設定完成</p><p class="status-desc">生命週期設定未完成，無法計算</p></div>
-          <div class="status-box" style="background:var(--amber-bg);border-color:var(--amber-bd);"><p class="status-name" style="color:var(--amber);">設定需更新</p><p class="status-desc">上游資料有變動，需重新匯入</p></div>
-          <div class="status-box" style="background:#EEF4FB;border-color:rgba(25,100,160,.18);"><p class="status-name" style="color:#1964A0;">計算完成</p><p class="status-desc">已完成計算，可查看結果或凍結</p></div>
-          <div class="status-box" style="background:var(--green-bg);border-color:var(--green-bd);"><p class="status-name" style="color:var(--green);">已凍結</p><p class="status-desc">資料已確認，數據鎖定不可修改</p></div>
+        <h3 class="process-title">B. 狀態系統決策：六種盤查狀態的優先排序邏輯</h3>
+        <p class="process-body">使用者需要在總覽頁快速判斷哪些產品需要優先處理。我定義了六種狀態並設計對應的顏色——橘色是尚未設定完成，紅色是設定需更新，綠色是設定完成（可計算），藍色是計算完成，灰色是已凍結，另有「請聯絡快思」做特殊狀態處理。狀態系統讓使用者不需要逐一點開才能判斷優先順序。</p>
+        <div class="status-grid" style="grid-template-columns:repeat(3,1fr);">
+          <div class="status-box" style="background:var(--amber-bg);border-color:var(--amber-bd);"><p class="status-name" style="color:var(--amber);">尚未設定完成</p><p class="status-desc">生命週期設定尚未完成，無法計算</p></div>
+          <div class="status-box" style="background:#FDF2F2;border-color:rgba(180,40,40,.18);"><p class="status-name" style="color:#B42222;">設定需更新</p><p class="status-desc">上游資料有變動，需重新匯入更新</p></div>
+          <div class="status-box" style="background:var(--green-bg);border-color:var(--green-bd);"><p class="status-name" style="color:var(--green);">設定完成</p><p class="status-desc">生命週期皆設定完成，可進行計算</p></div>
+          <div class="status-box" style="background:#EEF4FB;border-color:rgba(25,100,160,.18);"><p class="status-name" style="color:#1964A0;">計算完成</p><p class="status-desc">已計算完成，可查清冊；需凍結才能查看圖表</p></div>
+          <div class="status-box"><p class="status-name" style="color:var(--muted);">已凍結</p><p class="status-desc">該年度資料已確認凍結，數據鎖定</p></div>
+          <div class="status-box" style="background:#FDF2F2;border-color:rgba(180,40,40,.18);"><p class="status-name" style="color:#B42222;">請聯絡快思</p><p class="status-desc">遇到異常狀況，需聯繫客服協助</p></div>
         </div>
       </div>
 
