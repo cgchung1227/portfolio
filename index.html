@@ -76,6 +76,29 @@ a{color:inherit;text-decoration:none;}
 .str-title{font-weight:700;font-size:.9375rem;margin-bottom:.35rem;}
 .str-body{font-size:.8125rem;color:var(--muted);line-height:1.7;}
 
+/* WORK EXPERIENCE */
+.we-list{display:flex;flex-direction:column;}
+.we-item{display:grid;grid-template-columns:20px 1fr;gap:0 1.25rem;padding:1.5rem 0;}
+.we-item+.we-item{border-top:1px solid var(--border);}
+.we-marker{display:flex;flex-direction:column;align-items:center;padding-top:.3rem;}
+.we-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.we-dot--red{background:#C23939;}
+.we-dot--amber{background:#C2893B;}
+.we-dot--green{background:#3A845A;}
+.we-vline{flex:1;width:1px;background:var(--border);margin-top:.5rem;}
+.we-item:last-child .we-vline{display:none;}
+.we-co{font-weight:700;font-size:.9375rem;display:block;}
+.we-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem .5rem;margin-top:.2rem;}
+.we-role{font-size:.8125rem;color:var(--muted);}
+.we-sep{color:var(--faint);}
+.we-date{font-size:.75rem;color:var(--faint);}
+.we-focus{font-size:.8125rem;color:var(--text);line-height:1.65;margin-bottom:.75rem;border-left:2px solid var(--border);padding-left:.625rem;}
+.we-bullets{list-style:none;padding:0;margin:0 0 .875rem;display:flex;flex-direction:column;gap:.4rem;}
+.we-bullets li{font-size:.8125rem;color:var(--muted);line-height:1.65;padding-left:1.125rem;position:relative;}
+.we-bullets li::before{content:'—';position:absolute;left:0;color:var(--faint);font-size:.75rem;top:.05em;}
+.we-skills{display:flex;flex-wrap:wrap;gap:.3rem;}
+.we-skill{font-size:.7rem;color:var(--faint);background:var(--bg3);padding:.2rem .55rem;border-radius:999px;letter-spacing:.01em;}
+
 /* SECTION WRAPPER */
 .cs{padding:5rem 3rem;}
 .cs-inner{max-width:1100px;margin:0 auto;}
@@ -394,6 +417,96 @@ footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justi
             <p class="str-title">在模糊中做出清楚的決策</p>
             <p class="str-body">B2B SaaS 的需求常常模糊且互相衝突。喜歡花時間把問題框架定清楚，讓後續的優先排序和取捨決策有依據可循。</p>
           </div>
+        </div>
+      </div>
+      <div>
+        <p class="section-label">專業經歷</p>
+        <div class="we-list">
+
+          <!-- 快思 -->
+          <div class="we-item">
+            <div class="we-marker">
+              <div class="we-dot we-dot--red"></div>
+              <div class="we-vline"></div>
+            </div>
+            <div>
+              <span class="we-co">快思股份有限公司</span>
+              <div class="we-meta">
+                <span class="we-role">UI/UX 設計師</span>
+                <span class="we-sep">·</span>
+                <span class="we-date">2024.04 – 現在 · 台中西屯</span>
+              </div>
+              <p class="we-focus" style="margin-top:.75rem;">負責 Enterprise 級別 ESG SaaS 平台核心模組的產品規劃與流程定義，擅長將複雜法規與企業實務痛點，轉化為具落地性的功能規格。</p>
+              <ul class="we-bullets">
+                <li><strong>B2B 產品規劃與規格定義</strong> 獨立主導溫室氣體盤查、產品碳足跡、重大性評估問卷等核心模組的 IA 與高擬真原型設計，並負責撰寫 PRD。</li>
+                <li><strong>企業需求分析</strong> 直接對接企業客戶進行需求訪談，解析製造業在數位轉型與碳管理上的實務痛點，轉化為標準化、模組化的系統設計。</li>
+                <li><strong>AI 整合開發</strong> 熟練運用 Claude Code 進行設計交付與前端部署協作（Prototyping），大幅降低與研發團隊的溝通成本。</li>
+                <li><strong>品牌視覺建立</strong> 兼任公司平面文宣與展場核心視覺設計，確保品牌在數位產品與實體活動的一致性。</li>
+              </ul>
+              <div class="we-skills">
+                <span class="we-skill">B2B SaaS 規劃</span>
+                <span class="we-skill">ESG & 智慧製造</span>
+                <span class="we-skill">PRD 撰寫</span>
+                <span class="we-skill">AI-Integrated Dev</span>
+                <span class="we-skill">Figma</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 天方 -->
+          <div class="we-item">
+            <div class="we-marker">
+              <div class="we-dot we-dot--amber"></div>
+              <div class="we-vline"></div>
+            </div>
+            <div>
+              <span class="we-co">天方科技實業股份有限公司</span>
+              <div class="we-meta">
+                <span class="we-role">UI 設計師</span>
+                <span class="we-sep">·</span>
+                <span class="we-date">2023.10 – 2024.03 · 6 個月 · 台中南屯</span>
+              </div>
+              <p class="we-focus" style="margin-top:.75rem;">負責大型校務行政系統的體驗優化，具備處理多欄位、複雜權限與大規模數據連動系統的架構規劃能力。</p>
+              <ul class="we-bullets">
+                <li><strong>複雜系統規劃</strong> 主導校務專案「AI 選課系統」及各類行政系統的介面設計與使用者體驗流程優化，梳理龐大資訊流量。</li>
+                <li><strong>系統導入文件</strong> 獨立製作詳盡的系統操作手冊、規格簡報與說明文件，協助企業客戶與內部同仁理解系統邏輯，加速產品上線進度。</li>
+              </ul>
+              <div class="we-skills">
+                <span class="we-skill">大型後台 IA</span>
+                <span class="we-skill">AI 應用系統設計</span>
+                <span class="we-skill">系統導入手冊</span>
+                <span class="we-skill">Figma</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 澔心 -->
+          <div class="we-item">
+            <div class="we-marker">
+              <div class="we-dot we-dot--green"></div>
+              <div class="we-vline"></div>
+            </div>
+            <div>
+              <span class="we-co">澔心科技股份有限公司</span>
+              <div class="we-meta">
+                <span class="we-role">UI/UX 設計師</span>
+                <span class="we-sep">·</span>
+                <span class="we-date">2022.08 – 2023.03 · 8 個月 · 新竹</span>
+              </div>
+              <p class="we-focus" style="margin-top:.75rem;">由設計行銷助理快速晉升正職，負責 B2C 智慧硬體 App 的體驗優化與市場行銷驗證。</p>
+              <ul class="we-bullets">
+                <li><strong>產品體驗流程優化</strong> 負責寶寶智慧照護產品 APP 介面設計與全鏈路使用者體驗改善，優化核心操作流程。</li>
+                <li><strong>跨域行銷與視覺操刀</strong> 兼任官方網站設計、Facebook 社群行銷圖文發想與 Banner 製作，將產品亮點轉化為市場行銷語言。</li>
+              </ul>
+              <div class="we-skills">
+                <span class="we-skill">B2C 行銷與產品結合</span>
+                <span class="we-skill">APP 介面優化</span>
+                <span class="we-skill">MVP 市場驗證</span>
+                <span class="we-skill">Adobe Suite</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
